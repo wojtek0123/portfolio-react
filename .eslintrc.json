@@ -4,7 +4,7 @@
 		"es2021": true,
 		"jest": true
 	},
-	"extends": ["eslint:all", "plugin:react/recommended", "xo", "prettier"],
+	"extends": ["eslint:recommended", "plugin:react/recommended", "xo", "prettier"],
 	"overrides": [
 		{
 			"extends": ["xo-typescript"],
@@ -20,6 +20,9 @@
 	},
 	"plugins": ["react", "eslint-plugin-react", "react-hooks", "@typescript-eslint", "prettier"],
 	"rules": {
-		"react/react-in-jsx-scope": "off"
+		"react/react-in-jsx-scope": "off",
+		"no-unused-vars": "error",
+		"react/no-array-index-key": "error",
+		"no-duplicate-imports": "warn"
 	}
 }
