@@ -3,6 +3,18 @@ import backgroundImage from './assets/undraw_startup_life.svg';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 
+const slides = [
+	{
+		name: 'about me',
+	},
+	{
+		name: 'home',
+	},
+	{
+		name: 'projects',
+	},
+];
+
 const App = () => {
 	const [slide, setSlide] = useState(1);
 
@@ -28,17 +40,25 @@ const App = () => {
 		});
 	};
 
+	const changeSlide = () => {
+		if (slide === 1) {
+			return '-translate-x-[100vw]';
+		}
+
+		if (slide === 2) {
+			return '-translate-x-[200vw]';
+		}
+
+		return 'translate-x-0';
+	};
+
 	useEffect(() => {
 		console.log(slide);
 	}, [slide]);
 
 	return (
 		<div className='snap-x snap-proximity flex flex-col justify-between bg-black h-screen w-screen text-white overflow-y-hidden overflow-x-scroll'>
-			<div
-				className={`h-full flex w-max transition-transform duration-1000 ${
-					slide === 0 ? 'translate-x-0' : `-translate-x-[${slide * 100}vw]`
-				}`}
-			>
+			<div className={`h-full flex w-max transition-transform duration-1000 ${changeSlide()}`}>
 				<AboutMe />
 				<header className='flex flex-col justify-center h-full items-start w-screen snap-center'>
 					<div className='mb-10 px-5'>
@@ -61,7 +81,7 @@ const App = () => {
 				>
 					prev
 				</button>
-				<span className='text-xl uppercase'>home</span>
+				<span className='text-xl uppercase'>{slides[slide].name}</span>
 				<button
 					className='text-xl bg-white text-black py-1 px-3 rounded-lg'
 					type='button'
