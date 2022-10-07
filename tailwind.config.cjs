@@ -18,5 +18,5 @@ module.exports = {
 			'oswold-font': ['Oswald', 'sans-serif'],
 		},
 	},
-	plugins: [],
+	plugins: [require('tailwind-scrollbar')],
 };
