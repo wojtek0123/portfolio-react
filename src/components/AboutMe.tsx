@@ -2,7 +2,10 @@ import SectionTitle from './SectionTitle';
 import helloBackground from '../assets/undraw_hello.svg';
 
 const AboutMe = () => (
-	<section className='w-screen h-screen bg-black snap-start flex flex-col items-center justify-center'>
+	<section
+		className='w-screen h-screen bg-black snap-start flex flex-col items-center justify-center'
+		id='about-me'
+	>
 		<SectionTitle>About Me</SectionTitle>
 		<div className='px-5'>
 			<p className='mb-3 text-2xl'>Hi, my name is Wojciech.</p>
