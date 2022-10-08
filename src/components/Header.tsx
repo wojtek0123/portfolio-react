@@ -19,19 +19,19 @@ const Header = () => (
 						I&apos;m a Junior Frontend Developer
 					</h2>
 				</div>
-				<div className='flex gap-10'>
-					<button type='button' className='bg-white text-black px-10 py-3 text-xl rounded'>
+				<div className='flex w-full gap-2 sm:justify-start sm:gap-5 justify-evenly xl:gap-10 items-center'>
+					<button
+						type='button'
+						className='bg-white border border-white text-black px-10 py-3 text-xl rounded'
+					>
 						Contact
 					</button>
-					<a
-						href='#about-me'
-						className='hidden xl:block border border-white text-white px-10 py-3 text-xl rounded'
-					>
+					<a href='#about-me' className='border border-white text-white px-10 py-3 text-xl rounded'>
 						Next section
 					</a>
 				</div>
 			</div>
-			<div className='absolute text-2xl top-1/2 -translate-y-1/2 bg-white right-0 translate-x-1/3 border-white px-5 rounded animate-pulse rotate-90'>
+			<div className='absolute hidden xl:block text-2xl top-1/2 -translate-y-1/2 bg-white right-0 translate-x-1/3 border-white px-5 rounded animate-pulse rotate-90'>
 				<a href='#about-me' className='flex items-center justify-center rounded px-3 py-3'>
 					<p className='font-extralight text-black'>go to about me</p>
 					<img src={arrowRight} alt='' className='-rotate-90 w-6 h-6 ml-3' />
