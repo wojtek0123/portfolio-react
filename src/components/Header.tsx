@@ -6,13 +6,15 @@ import sassIcon from '../assets/sass-brand.svg';
 import githubIcon from '../assets/github.svg';
 import ChangeSectionBtn from './ChangeSectionBtn';
 import angularIcon from '../assets/angular.svg';
+import linkedInIcon from '../assets/linkedin-blue.svg';
+import vueIcon from '../assets/vuejs-icon.svg';
 
 const Header = () => (
 	<header
 		className='relative flex flex-col justify-center items-center w-screen snap-center h-screen overflow-x-hidden'
 		id='header'
 	>
-		<div className='flex flex-col justify-center items-start xl:grid xl:grid-cols-2'>
+		<div className='grid justify-center items-start xl:grid-cols-2'>
 			<div className='flex flex-col items-start justify-start gap-y-24 h-full mb-10 px-5 md:mb-16'>
 				<div>
 					<span className='text-5xl md:text-7xl xl:text-9xl font-bold'>Hello!</span>
@@ -44,7 +46,7 @@ const Header = () => (
 		<div className='hidden lg:block absolute top-[15vh] left-[5vw] animate-[spin_infinite_3s_forwards_reverse_linear]'>
 			<img src={typescriptIcon} alt='' className='w-10 h-10' />
 		</div>
-		<div className='hidden xl:block absolute top-[65vh] left-[50vw] animate-[spin_infinite_3s_forwards_reverse_linear]'>
+		<div className='hidden xl:block absolute top-[65vh] left-[50vw] animate-[spin_infinite_6s_forwards_reverse_linear]'>
 			<img src={sassIcon} alt='' className='w-10 h-10' />
 		</div>
 		<div className='hidden xl:block absolute top-[85vh] left-[80vw] animate-[spin_infinite_3s_forwards_reverse_linear]'>
@@ -52,6 +54,15 @@ const Header = () => (
 		</div>
 		<div className='hidden lg:block absolute top-[10vh] left-[40vw] animate-[spin_infinite_10s_forwards_linear]'>
 			<img src={angularIcon} alt='' className='w-12 h-12' />
+		</div>
+		<div className='hidden lg:block absolute top-[53vh] left-[45vw] animate-[spin_infinite_10s_forwards_reverse_linear]'>
+			<img src={angularIcon} alt='' className='w-12 h-12' />
+		</div>
+		<div className='hidden lg:block absolute top-[10vh] left-[90vw] animate-[spin_infinite_7s_forwards_reverse_linear]'>
+			<img src={linkedInIcon} alt='' className='w-8 h-8' />
+		</div>
+		<div className='hidden lg:block absolute top-[95vh] left-[60vw] animate-[spin_infinite_15s_forwards_reverse_linear]'>
+			<img src={vueIcon} alt='' className='w-10 h-10' />
 		</div>
 	</header>
 );
