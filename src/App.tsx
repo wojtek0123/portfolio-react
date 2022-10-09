@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import AboutMe from './components/AboutMe';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import MyStack from './components/MyStack';
@@ -21,6 +22,7 @@ const App = () => {
 						<AboutMe />
 						<MyStack />
 						<Projects />
+						<Contact />
 						<Footer />
 					</>
 				)}
@@ -45,6 +47,12 @@ const App = () => {
 						href='#projects'
 					>
 						projects
+					</a>
+					<a
+						className='relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase'
+						href='#contact'
+					>
+						contact
 					</a>
 				</nav>
 				<div className='flex items-center gap-5'>

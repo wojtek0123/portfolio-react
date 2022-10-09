@@ -23,12 +23,12 @@ const Header = () => (
 					</h2>
 				</div>
 				<div className='flex w-full gap-2 sm:justify-start sm:gap-5 justify-evenly xl:gap-10 items-center'>
-					<button
-						type='button'
+					<a
+						href='#contact'
 						className='bg-white border border-white text-black px-10 py-3 text-xl rounded'
 					>
 						Contact
-					</button>
+					</a>
 					<a href='#about-me' className='border border-white text-white px-10 py-3 text-xl rounded'>
 						Next section
 					</a>
