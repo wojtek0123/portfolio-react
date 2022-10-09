@@ -34,16 +34,20 @@ const Contact = () => (
 						name='message'
 						required
 					></textarea>
-					<button className='bg-white max-w-xs py-3 text- rounded text-black' type='submit'>
+					<button
+						className='bg-white w-full xl:max-w-xs py-3 text-xl rounded text-black'
+						type='submit'
+					>
 						Submit
 					</button>
 				</form>
 				<div className='flex items-center justify-evenly xl:justify-start gap-5'>
 					<a
 						href='https://www.linkedin.com/in/wojciech-pietraszuk-333159199/'
-						rel='noopener'
+						rel='noopener noreferrer'
 						title='LinkedIn profile'
 						className='flex items-center justify-center'
+						target='_blank'
 					>
 						<svg
 							className='fill-white w-10 h-10 hover:fill-yellow-500 transition-colors duration-300'
@@ -55,8 +59,9 @@ const Contact = () => (
 					<a
 						href='https://github.com/wojtek0123'
 						className='flex items-center justify-center'
-						rel='noopener'
+						rel='noopener noreferrer'
 						title='Github profile'
+						target='_blank'
 					>
 						<svg
 							className='fill-white w-10 h-10 hover:fill-yellow-500 transition-colors duration-300'
@@ -67,9 +72,10 @@ const Contact = () => (
 					</a>
 					<a
 						href='https://www.facebook.com/wojtus.pietraszuk/'
-						rel='noopener'
+						rel='noopener noreferrer'
 						title='Facebook profile'
 						className='flex items-center justify-center'
+						target='_blank'
 					>
 						<svg
 							className='fill-white hover:fill-yellow-500 transition-colors duration-300 w-10 h-10'
