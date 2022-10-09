@@ -4,8 +4,8 @@ import graphqlIcon from '../assets/graphql-logo-2.svg';
 import typescriptIcon from '../assets/typescript-brand.svg';
 import sassIcon from '../assets/sass-brand.svg';
 import githubIcon from '../assets/github.svg';
-import arrowRight from '../assets/arrow-right.svg';
 import ChangeSectionBtn from './ChangeSectionBtn';
+import angularIcon from '../assets/angular.svg';
 
 const Header = () => (
 	<header
@@ -51,9 +51,7 @@ const Header = () => (
 			<img src={githubIcon} alt='' className='w-10 h-10' />
 		</div>
 		<div className='hidden lg:block absolute top-[10vh] left-[40vw] animate-[spin_infinite_10s_forwards_linear]'>
-			<svg className='w-10 h-10 fill-[#e23237]' viewBox='0 0 448 512'>
-				<path d='M185.7 268.1h76.2l-38.1-91.6-38.1 91.6zM223.8 32L16 106.4l31.8 275.7 176 97.9 176-97.9 31.8-275.7zM354 373.8h-48.6l-26.2-65.4H168.6l-26.2 65.4H93.7L223.8 81.5z' />
-			</svg>
+			<img src={angularIcon} alt='' className='w-12 h-12' />
 		</div>
 	</header>
 );
