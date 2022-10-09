@@ -1,9 +1,10 @@
 import SectionTitle from './SectionTitle';
 import helloBackground from '../assets/undraw_hello.svg';
+import ChangeSectionBtn from './ChangeSectionBtn';
 
 const AboutMe = () => (
 	<section
-		className='w-screen h-screen bg-black snap-start flex flex-col items-center justify-center'
+		className='relative w-screen h-screen bg-black snap-start flex flex-col items-center justify-center'
 		id='about-me'
 	>
 		<SectionTitle>About Me</SectionTitle>
@@ -22,6 +23,8 @@ const AboutMe = () => (
 			</p>
 		</div>
 		<img src={helloBackground} alt='' className='mt-10' />
+		<ChangeSectionBtn isRight={true} sectionId='projects' sectionName='projects' />
+		<ChangeSectionBtn isRight={false} sectionId='header' sectionName='home' />
 	</section>
 );
 

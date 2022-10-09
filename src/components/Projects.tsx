@@ -2,6 +2,7 @@ import SectionTitle from './SectionTitle';
 import jobForDevsImage from '../assets/home-job-for-devs.png';
 import restCountriesApiImage from '../assets/home-rest-countries-api.png';
 import {v4 as uuid} from 'uuid';
+import ChangeSectionBtn from './ChangeSectionBtn';
 
 type Project = {
 	id: string;
@@ -33,7 +34,7 @@ const projects: Project[] = [
 
 const Projects = () => (
 	<section
-		className='w-screen h-screen bg-black snap-center flex flex-col items-center justify-center'
+		className='relative w-screen h-screen bg-black snap-center flex flex-col items-center justify-center'
 		id='projects'
 	>
 		<SectionTitle>Projects</SectionTitle>
@@ -61,6 +62,7 @@ const Projects = () => (
 				</div>
 			))}
 		</div>
+		<ChangeSectionBtn isRight={false} sectionId='about-me' sectionName='about me' />
 	</section>
 );
 

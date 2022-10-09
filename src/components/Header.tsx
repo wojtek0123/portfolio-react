@@ -5,6 +5,7 @@ import typescriptIcon from '../assets/typescript-brand.svg';
 import sassIcon from '../assets/sass-brand.svg';
 import githubIcon from '../assets/github.svg';
 import arrowRight from '../assets/arrow-right.svg';
+import ChangeSectionBtn from './ChangeSectionBtn';
 
 const Header = () => (
 	<header
@@ -31,12 +32,7 @@ const Header = () => (
 					</a>
 				</div>
 			</div>
-			<div className='absolute hidden xl:block text-2xl top-1/2 -translate-y-1/2 bg-white right-0 translate-x-1/3 border-white px-5 rounded animate-pulse rotate-90'>
-				<a href='#about-me' className='flex items-center justify-center rounded px-3 py-3'>
-					<p className='font-extralight text-black'>go to about me</p>
-					<img src={arrowRight} alt='' className='-rotate-90 w-6 h-6 ml-3' />
-				</a>
-			</div>
+			<ChangeSectionBtn isRight={true} sectionId='about-me' sectionName='about me' />
 			<img src={backgroundImage} alt='' />
 		</div>
 		<div className='hidden xl:block absolute top-[80vh] left-[20vw] animate-[spin_infinite_5s_forwards_linear]'>
