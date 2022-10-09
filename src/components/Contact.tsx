@@ -1,6 +1,7 @@
 import SectionTitle from './SectionTitle';
 import SectionWrapper from './SectionWrapper';
 import background from '../assets/undraw_envelope.svg';
+import ChangeSectionBtn from './ChangeSectionBtn';
 
 const Contact = () => (
 	<SectionWrapper sectionId='contact'>
@@ -28,7 +29,7 @@ const Contact = () => (
 						required
 					/>
 					<textarea
-						className='p-2 rounded text-xl max-w-2xl h-40 xl:h-80'
+						className='p-2 rounded text-xl max-w-2xl h-40 xl:h-80 max-h-80'
 						placeholder='message'
 						name='message'
 						required
@@ -80,6 +81,7 @@ const Contact = () => (
 				</div>
 			</div>
 			<img src={background} alt='' className='hidden xl:block' />
+			<ChangeSectionBtn isRight={false} sectionId='projects' sectionName='projects' />
 		</>
 	</SectionWrapper>
 );

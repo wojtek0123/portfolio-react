@@ -101,6 +101,7 @@ const Projects = () => {
 					))}
 				</div>
 				<ChangeSectionBtn isRight={false} sectionId='about-me' sectionName='about me' />
+				<ChangeSectionBtn isRight={true} sectionId='contact' sectionName='contact' />
 			</>
 		</SectionWrapper>
 	);
