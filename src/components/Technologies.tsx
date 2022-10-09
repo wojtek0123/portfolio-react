@@ -13,7 +13,7 @@ import angularIcon from '../assets/angular.svg';
 
 const Technologies = () => (
 	<>
-		<h4 className='text-3xl mb-5 2xl:text-4xl'>Technologies I used:</h4>
+		<h4 className='text-3xl mb-5 2xl:text-4xl'>Technologies that I used</h4>
 		<div className='flex flex-wrap gap-5'>
 			<img src={reactIcon} alt='react icon logo' className='h-14 2xl:h-20' />
 			<img src={nextIcon} alt='nextjs icon logo' className='h-14 2xl:h-20' />
@@ -27,7 +27,7 @@ const Technologies = () => (
 			<img src={cssIcon} alt='css3 icon logo' className='h-14 2xl:h-20' />
 			<img src={htmlIcon} alt='html5 icon logo' className='h-14 2xl:h-20' />
 		</div>
-		<h4 className='text-3xl my-5 2xl:text-4xl'>Currently I&apos;m learning</h4>
+		<h4 className='text-3xl my-5 2xl:text-4xl'> I&apos;m currently learning</h4>
 		<img src={angularIcon} alt='angular icon logo' className='h-14 2xl:h-20' />
 	</>
 );
