@@ -2,6 +2,7 @@ import {useState} from 'react';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import MyStack from './components/MyStack';
 import Projects from './components/Projects';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
 				{showAllSection && (
 					<>
 						<AboutMe />
+						<MyStack />
 						<Projects />
 						<Footer />
 					</>
