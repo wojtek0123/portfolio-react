@@ -13,7 +13,7 @@ const App = () => {
 	}, 0);
 
 	return (
-		<div className='snap-both snap-mandatory h-screen overflow-y-scroll bg-black text-white overflow-x-hidden xl:overflow-x-scroll xl:overflow-y-hidden xl:scrollbar-none scroll-smooth relative'>
+		<div className='snap-both snap-mandatory h-screen overflow-y-scroll bg-black text-white overflow-x-hidden xl:overflow-x-scroll xl:overflow-y-hidden xl:scrollbar-none scroll-smooth relative selection:text-black selection:bg-white'>
 			<div className='flex flex-col xl:flex-row w-max'>
 				<Header />
 				{showAllSection && (
