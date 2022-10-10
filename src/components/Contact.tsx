@@ -29,7 +29,7 @@ const Contact = () => (
 						required
 					/>
 					<textarea
-						className='p-2 rounded text-xl max-w-2xl h-40 xl:h-80 max-h-80'
+						className='p-2 rounded text-xl w-full xl:max-w-2xl h-40 xl:h-80 max-h-80'
 						placeholder='message'
 						name='message'
 						required
