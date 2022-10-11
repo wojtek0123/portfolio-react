@@ -18,7 +18,7 @@ const ChangeSectionBtn: React.FC<{sectionName: string; isRight: boolean; section
 	if (isRight) {
 		return (
 			<div
-				className={`absolute hidden w-56 xl:block text-2xl top-1/2 -translate-y-1/2 bg-white border-white px-5 rounded animate-pulse ${changeButtonPosition()}`}
+				className={`absolute hidden w-56 xl:block text-2xl top-1/2 -translate-y-1/2 bg-yellow-500 border-white px-5 rounded animate-pulse ${changeButtonPosition()}`}
 			>
 				<a href={`#${sectionId}`} className='flex items-center justify-center rounded px-3 py-3'>
 					<p className='font-extralight text-black lowercase'>go to {sectionName}</p>
@@ -30,7 +30,7 @@ const ChangeSectionBtn: React.FC<{sectionName: string; isRight: boolean; section
 
 	return (
 		<div
-			className={`absolute hidden w-56 xl:block text-2xl top-1/2 -translate-y-1/2 bg-white border-white px-5 rounded animate-pulse ${changeButtonPosition()}`}
+			className={`absolute hidden w-56 xl:block text-2xl top-1/2 -translate-y-1/2 bg-yellow-500 border-white px-5 rounded animate-pulse ${changeButtonPosition()}`}
 		>
 			<a href={`#${sectionId}`} className='flex items-center justify-center rounded px-3 py-3'>
 				<img src={arrowLeft} alt='' className='rotate-90  w-6 h-6 mr-3' />
