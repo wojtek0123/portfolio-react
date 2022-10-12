@@ -11,28 +11,28 @@ import vueIcon from '../assets/vuejs-icon.svg';
 
 const Header = () => (
 	<header
-		className='relative flex flex-col justify-center items-center w-screen snap-center h-screen overflow-x-hidden'
+		className='relative flex justify-center items-center w-screen snap-start xl:snap-center min-h-screen overflow-x-hidden'
 		id='header'
 	>
-		<div className='grid justify-center items-start xl:grid-cols-2'>
-			<div className='flex flex-col items-start justify-start gap-y-24 h-full mb-10 px-5 md:mb-16'>
+		<div className='grid xl:grid-cols-2'>
+			<div className='flex flex-col items-start justify-start gap-y-8 md:gap-y-14 xl:gap-y-24 mb-10 px-5 md:mb-16'>
 				<div>
-					<span className='text-5xl md:text-7xl xl:text-9xl font-bold'>Hello!</span>
+					<span className='text-5xl md:text-8xl xl:text-9xl font-bold'>Hello!</span>
 					<h2 className='text-4xl font-bold mt-5 xl:text-6xl'>
 						I&apos;m a Junior Frontend Developer
 					</h2>
 				</div>
-				<div className='flex w-full gap-2 sm:justify-start sm:gap-5 justify-evenly xl:gap-10 items-center'>
+				<div className='flex w-full gap-x-2 sm:justify-start sm:gap-x-5 justify-evenly xl:gap-10 items-center'>
 					<button
 						type='button'
-						className='bg-white border border-white text-black px-10 py-3 text-xl rounded'
+						className='bg-white border border-white text-black px-5 sm:px-10 py-3 text-xl rounded'
 						onClick={() => document.getElementById('contact')?.scrollIntoView()}
 					>
 						Contact
 					</button>
 					<button
 						type='button'
-						className='border border-white text-white px-10 py-3 text-xl rounded'
+						className='border border-white text-white px-5 sm:px-10 py-3 text-xl rounded'
 						onClick={() => document.getElementById('about-me')?.scrollIntoView()}
 					>
 						Next section
@@ -40,7 +40,7 @@ const Header = () => (
 				</div>
 			</div>
 			<ChangeSectionBtn isRight={true} sectionId='about-me' sectionName='about me' />
-			<img src={backgroundImage} alt='' />
+			<img src={backgroundImage} alt='' className='' />
 		</div>
 		<div className='hidden xl:block absolute top-[80vh] left-[20vw] animate-[spin_infinite_5s_forwards_linear]'>
 			<img src={reactIcon} alt='' className='w-10 h-10' />
