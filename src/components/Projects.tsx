@@ -50,7 +50,6 @@ const Projects = () => {
 			queryProjects,
 		);
 		setProjects(response.projects);
-		console.log(response);
 	};
 
 	useEffect(() => {
@@ -94,7 +93,7 @@ const Projects = () => {
 											href={project.githubLink}
 											rel='noopener noreferrer'
 											target='_blank'
-											className='bg-yellow-500 text-black px-5 py-2 rounded'
+											className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
 										>
 											Github
 										</a>
@@ -102,7 +101,7 @@ const Projects = () => {
 											href={project.demoLink}
 											rel='noopener noreferrer'
 											target='_blank'
-											className='bg-yellow-500 text-black px-5 py-2 rounded'
+											className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
 										>
 											Live
 										</a>

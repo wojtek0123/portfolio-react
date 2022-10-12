@@ -25,14 +25,14 @@ const Header = () => (
 				<div className='flex w-full gap-x-2 sm:justify-start sm:gap-x-5 justify-evenly xl:gap-10 items-center'>
 					<button
 						type='button'
-						className='bg-white border border-white text-black px-5 sm:px-10 py-3 text-xl rounded'
+						className='bg-white border border-white text-black px-5 sm:px-10 py-3 text-xl rounded hover:bg-slate-300 transition-colors'
 						onClick={() => document.getElementById('contact')?.scrollIntoView()}
 					>
 						Contact
 					</button>
 					<button
 						type='button'
-						className='border border-white text-white px-5 sm:px-10 py-3 text-xl rounded'
+						className='border border-white text-white px-5 sm:px-10 py-3 text-xl rounded bg-black hover:bg-zinc-900'
 						onClick={() => document.getElementById('about-me')?.scrollIntoView()}
 					>
 						Next section
