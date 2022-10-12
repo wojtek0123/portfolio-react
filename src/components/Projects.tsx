@@ -1,48 +1,61 @@
 import SectionTitle from './SectionTitle';
-import jobForDevsImage from '../assets/home-job-for-devs.png';
-import restCountriesApiImage from '../assets/home-rest-countries-api.png';
 import {v4 as uuid} from 'uuid';
 import ChangeSectionBtn from './ChangeSectionBtn';
 import SectionWrapper from './SectionWrapper';
 import Technologies from './Technologies';
+import {request, gql} from 'graphql-request';
+import {useEffect, useState} from 'react';
 
 type Project = {
 	id: string;
 	title: string;
 	technologies: string[];
-	image: string;
+	image: {
+		url: string;
+	};
 	githubLink: string;
 	demoLink: string;
 	description: string;
 };
 
-const projects: Project[] = [
-	{
-		id: uuid(),
-		title: 'Job for devs',
-		technologies: ['nextjs', 'typescript', 'graphql', 'apollo', 'prisma', 'tailwind', 'next-auth'],
-		image: jobForDevsImage,
-		githubLink: 'https://github.com/wojtek0123/job-for-devs',
-		demoLink: 'https://job-for-devs.vercel.app',
-		description:
-			'Fullstack application for developers who want to find a job or hire someone. \n User can: login, add new offer apply for existing offer, see applications for his offer, see his applications on other people offers and his, posted offers can be filter by title, seniority, city, technologies and category change name in profile name',
-	},
-	{
-		id: uuid(),
-		title: 'REST Countries API',
-		technologies: ['react', 'typescript', 'rest api'],
-		image: restCountriesApiImage,
-		githubLink: 'https://github.com/wojtek0123/rest-countries-api',
-		demoLink: 'https://rest-countries-api-sage.vercel.app',
-		description: 'Frontend mentor challenge. App helps to find out more about countries',
-	},
-];
+const queryProjects = gql`
+	query Projects {
+		projects {
+			createdAt
+			demoLink
+			description
+			githubLink
+			id
+			publishedAt
+			technologies
+			title
+			updatedAt
+			image {
+				url
+			}
+		}
+	}
+`;
 
 const Projects = () => {
+	const [projects, setProjects] = useState<Project[]>([]);
 	const addDot = (text: string) => {
 		text += '.';
 		return text;
 	};
+
+	const getProjects = async () => {
+		const response: {projects: Project[]} = await request(
+			import.meta.env.VITE_CMS_API,
+			queryProjects,
+		);
+		setProjects(response.projects);
+		console.log(response);
+	};
+
+	useEffect(() => {
+		void (async () => getProjects())();
+	}, []);
 
 	return (
 		<SectionWrapper sectionId='projects'>
@@ -59,7 +72,7 @@ const Projects = () => {
 							<h2 className='text-center text-2xl mb-5'>{project.title}</h2>
 							<div className='grid 2xl:grid-cols-2 xl:gap-5'>
 								<a href={project.demoLink} rel='noopener noreferrer' target='_blank'>
-									<img src={project.image} alt={`${project.title} home page screenshot`} />
+									<img src={project.image.url} alt={`${project.title} home page screenshot`} />
 								</a>
 								<div className='mt-5 xl:mt-0'>
 									<div className='text-lg'>
