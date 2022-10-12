@@ -3,6 +3,7 @@ import SectionWrapper from './SectionWrapper';
 import background from '../assets/undraw_envelope.svg';
 import ChangeSectionBtn from './ChangeSectionBtn';
 import SocialLinks from './SocialLinks';
+import Footer from './Footer';
 
 const Contact = () => (
 	<SectionWrapper sectionId='contact'>
@@ -46,6 +47,7 @@ const Contact = () => (
 			</div>
 			<img src={background} alt='' className='hidden xl:block' />
 			<ChangeSectionBtn isRight={false} sectionId='projects' sectionName='projects' />
+			<Footer />
 		</>
 	</SectionWrapper>
 );

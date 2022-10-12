@@ -1,7 +1,6 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 import Header from './components/Header';
 import MyStack from './components/MyStack';
 import Projects from './components/Projects';
@@ -10,9 +9,11 @@ import SocialLinks from './components/SocialLinks';
 const App = () => {
 	const [showAllSection, setShowAllSection] = useState(false);
 
-	setTimeout(() => {
-		setShowAllSection(true);
-	}, 0);
+	useEffect(() => {
+		setTimeout(() => {
+			setShowAllSection(true);
+		}, 0);
+	}, []);
 
 	return (
 		<div className='snap-both snap-mandatory h-screen overflow-y-scroll bg-black text-white overflow-x-hidden xl:overflow-x-scroll xl:overflow-y-hidden xl:scrollbar-none scroll-smooth relative selection:text-black selection:bg-white'>
@@ -24,7 +25,6 @@ const App = () => {
 						<MyStack />
 						<Projects />
 						<Contact />
-						<Footer />
 					</>
 				)}
 			</div>
