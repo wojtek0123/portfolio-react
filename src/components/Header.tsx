@@ -66,7 +66,7 @@ const Header = () => (
 		<div className='hidden lg:block absolute top-[10vh] left-[90vw] animate-[spin_infinite_7s_forwards_reverse_linear]'>
 			<img src={linkedInIcon} alt='' className='w-8 h-8' />
 		</div>
-		<div className='hidden lg:block absolute top-[95vh] left-[60vw] animate-[spin_infinite_15s_forwards_reverse_linear]'>
+		<div className='hidden lg:block absolute top-[90vh] left-[60vw] animate-[spin_infinite_15s_forwards_reverse_linear]'>
 			<img src={vueIcon} alt='' className='w-10 h-10' />
 		</div>
 	</header>
