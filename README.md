@@ -9,5 +9,5 @@
 ### [Live](https://portfolio-wojtek.vercel.app/)
 
 #### Todo:
-- [ ] graphCMS
+- [x] graphCMS
 - [ ] typing animation for Hello in the header
