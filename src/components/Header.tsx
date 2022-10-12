@@ -23,15 +23,20 @@ const Header = () => (
 					</h2>
 				</div>
 				<div className='flex w-full gap-2 sm:justify-start sm:gap-5 justify-evenly xl:gap-10 items-center'>
-					<a
-						href='#contact'
+					<button
+						type='button'
 						className='bg-white border border-white text-black px-10 py-3 text-xl rounded'
+						onClick={() => document.getElementById('contact')?.scrollIntoView()}
 					>
 						Contact
-					</a>
-					<a href='#about-me' className='border border-white text-white px-10 py-3 text-xl rounded'>
+					</button>
+					<button
+						type='button'
+						className='border border-white text-white px-10 py-3 text-xl rounded'
+						onClick={() => document.getElementById('about-me')?.scrollIntoView()}
+					>
 						Next section
-					</a>
+					</button>
 				</div>
 			</div>
 			<ChangeSectionBtn isRight={true} sectionId='about-me' sectionName='about me' />
