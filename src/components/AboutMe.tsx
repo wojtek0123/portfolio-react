@@ -32,7 +32,7 @@ const AboutMe: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) =
 							regurarly gain knowledge about technologies use to built webpages UI.
 						</p>
 						<p className='mt-2 xl:text-xl'>
-							I&apos;m mostly interesed in new technologies and sports like cycling and running.
+							I&apos;m mostly interested in new technologies and sports like cycling and running.
 						</p>
 					</div>
 					<div className='mt-10 hidden sm:px-5 sm:flex sm:flex-col xl:px-0'>
