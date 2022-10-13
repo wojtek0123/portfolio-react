@@ -1,6 +1,7 @@
 import arrowRight from '../assets/arrow-right.svg';
 import arrowLeft from '../assets/arrow-left.svg';
 import PropTypes from 'prop-types';
+import {navLinksHandler} from '../utils/utils';
 
 const ChangeSectionBtn: React.FC<{sectionName: string; isRight: boolean; sectionId: string}> = ({
 	sectionName,
@@ -20,10 +21,16 @@ const ChangeSectionBtn: React.FC<{sectionName: string; isRight: boolean; section
 			<div
 				className={`absolute hidden w-56 xl:block text-2xl top-1/2 -translate-y-1/2 bg-yellow-500 border-white px-5 rounded animate-pulse ${changeButtonPosition()}`}
 			>
-				<a href={`#${sectionId}`} className='flex items-center justify-center rounded px-3 py-3'>
+				<button
+					type='button'
+					className='flex items-center justify-center rounded px-3 py-3'
+					onClick={() => {
+						navLinksHandler(sectionId);
+					}}
+				>
 					<p className='font-extralight text-black lowercase'>go to {sectionName}</p>
 					<img src={arrowRight} alt='' className='-rotate-90  w-6 h-6 ml-3' />
-				</a>
+				</button>
 			</div>
 		);
 	}
@@ -32,10 +39,16 @@ const ChangeSectionBtn: React.FC<{sectionName: string; isRight: boolean; section
 		<div
 			className={`absolute hidden w-56 xl:block text-2xl top-1/2 -translate-y-1/2 bg-yellow-500 border-white px-5 rounded animate-pulse ${changeButtonPosition()}`}
 		>
-			<a href={`#${sectionId}`} className='flex items-center justify-center rounded px-3 py-3'>
+			<button
+				type='button'
+				className='flex items-center justify-center rounded px-3 py-3'
+				onClick={() => {
+					navLinksHandler(sectionId);
+				}}
+			>
 				<img src={arrowLeft} alt='' className='rotate-90  w-6 h-6 mr-3' />
 				<p className='font-extralight text-black lowercase'>go to {sectionName}</p>
-			</a>
+			</button>
 		</div>
 	);
 };

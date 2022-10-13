@@ -5,6 +5,7 @@ import Header from './components/Header';
 import MyStack from './components/MyStack';
 import Projects from './components/Projects';
 import SocialLinks from './components/SocialLinks';
+import {navLinksHandler} from './utils/utils';
 
 const App = () => {
 	const [showAllSection, setShowAllSection] = useState(false);
@@ -65,7 +66,7 @@ const App = () => {
 						}`}
 						type='button'
 						onClick={() => {
-							navLinksHeader('header');
+							navLinksHandler('header');
 						}}
 					>
 						home
@@ -76,7 +77,7 @@ const App = () => {
 						}`}
 						type='button'
 						onClick={() => {
-							navLinksHeader('about-me');
+							navLinksHandler('about-me');
 						}}
 					>
 						about me
@@ -87,7 +88,7 @@ const App = () => {
 						}`}
 						type='button'
 						onClick={() => {
-							navLinksHeader('projects');
+							navLinksHandler('projects');
 						}}
 					>
 						projects
@@ -98,7 +99,7 @@ const App = () => {
 						}`}
 						type='button'
 						onClick={() => {
-							navLinksHeader('contact');
+							navLinksHandler('contact');
 						}}
 					>
 						contact
