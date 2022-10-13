@@ -75,7 +75,7 @@ const Projects: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) 
 						<Technologies />
 					</div>
 				</div>
-				<div className='overflow-y-scroll w-full max-h-[80vh] pr-5 pl-1 xl:pl-0  scrollbar-thumb-yellow-500 scrollbar-track-gray-100 scrollbar-thin scrollbar-rounded-[1rem]'>
+				<div className='overflow-y-scroll w-full max-h-[65vh] xl:max-h-[80vh] pr-5 pl-1 xl:pl-0  scrollbar-thumb-yellow-500 scrollbar-track-gray-100 scrollbar-thin scrollbar-rounded-[1rem]'>
 					{projects.map((project) => (
 						<div key={project.id} className='w-full text-white bg-black'>
 							<h2 className='text-center text-2xl mb-5'>{project.title}</h2>
