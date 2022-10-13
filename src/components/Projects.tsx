@@ -121,6 +121,16 @@ const Projects: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) 
 							<div className='w-full h-[0.1rem] bg-white my-10'></div>
 						</div>
 					))}
+					<div className='flex items-center justify-center mb-2'>
+						<a
+							href='https://github.com/wojtek0123?tab=repositories'
+							rel='noopener noreferrer'
+							target='_blank'
+							className='border border-white bg-black text-white px-5 py-3 rounded hover:bg-zinc-900 transition-colors text-xl sm:px-10'
+						>
+							See more
+						</a>
+					</div>
 				</div>
 				<ChangeSectionBtn isRight={false} sectionId='about-me' sectionName='about me' />
 				<ChangeSectionBtn isRight={true} sectionId='contact' sectionName='contact' />
