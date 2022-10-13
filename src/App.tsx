@@ -14,10 +14,6 @@ const App = () => {
 	const [isAboutMeSectionVisible, setIsAboutMeSectionVisible] = useState(false);
 	const [isContactSectionVisible, setIsContactSectionVisible] = useState(false);
 
-	const navLinksHeader = (sectionId: string) => {
-		document.getElementById(sectionId)?.scrollIntoView();
-	};
-
 	const visibleHandler = (value: boolean, fn: (value: boolean) => void) => {
 		fn(value);
 	};
