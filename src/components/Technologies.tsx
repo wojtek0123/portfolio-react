@@ -15,20 +15,20 @@ const Technologies = () => (
 	<>
 		<h4 className='text-3xl mb-5 2xl:text-4xl'>Technologies that I used</h4>
 		<div className='flex flex-wrap gap-5'>
-			<img src={reactIcon} alt='react icon logo' className='h-14 2xl:h-20' />
-			<img src={nextIcon} alt='nextjs icon logo' className='h-14 2xl:h-20' />
-			<img src={typescriptIcon} alt='typescript icon logo' className='h-14 2xl:h-20' />
-			<img src={graphqlIcon} alt='graphql icon logo' className='h-14 2xl:h-20' />
-			<img src={apolloIcon} alt='apollo icon logo' className='h-14 2xl:h-20' />
-			<img src={prismaIcon} alt='prisma icon logo' className='h-14 2xl:h-20' />
-			<img src={javascriptIcon} alt='javascript icon logo' className='h-14 2xl:h-20' />
-			<img src={tailwindIcon} alt='tailwindcss icon logo' className='h-14 2xl:h-20' />
-			<img src={sassIcon} alt='sass icon logo' className='h-14 2xl:h-20' />
-			<img src={cssIcon} alt='css3 icon logo' className='h-14 2xl:h-20' />
-			<img src={htmlIcon} alt='html5 icon logo' className='h-14 2xl:h-20' />
+			<img src={reactIcon} alt='react icon logo' className='h-14 2xl:h-14' />
+			<img src={nextIcon} alt='nextjs icon logo' className='h-14 2xl:h-14' />
+			<img src={typescriptIcon} alt='typescript icon logo' className='h-14 2xl:h-14' />
+			<img src={graphqlIcon} alt='graphql icon logo' className='h-14 2xl:h-14' />
+			<img src={apolloIcon} alt='apollo icon logo' className='h-14 2xl:h-14' />
+			<img src={prismaIcon} alt='prisma icon logo' className='h-14 2xl:h-14' />
+			<img src={javascriptIcon} alt='javascript icon logo' className='h-14 2xl:h-14' />
+			<img src={tailwindIcon} alt='tailwindcss icon logo' className='h-14 2xl:h-14' />
+			<img src={sassIcon} alt='sass icon logo' className='h-14 2xl:h-14' />
+			<img src={cssIcon} alt='css3 icon logo' className='h-14 2xl:h-14' />
+			<img src={htmlIcon} alt='html5 icon logo' className='h-14 2xl:h-14' />
 		</div>
 		<h4 className='text-3xl my-5 2xl:text-4xl'> I&apos;m currently learning</h4>
-		<img src={angularIcon} alt='angular icon logo' className='h-14 2xl:h-20' />
+		<img src={angularIcon} alt='angular icon logo' className='h-14 2xl:h-14' />
 	</>
 );
 
