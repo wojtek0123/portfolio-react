@@ -5,6 +5,8 @@ import SectionWrapper from './SectionWrapper';
 import Technologies from './Technologies';
 import {request, gql} from 'graphql-request';
 import {useEffect, useState} from 'react';
+import {useInView} from 'react-intersection-observer';
+import PropTypes from 'prop-types';
 
 type Project = {
 	id: string;
@@ -37,7 +39,7 @@ const queryProjects = gql`
 	}
 `;
 
-const Projects = () => {
+const Projects: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) => {
 	const [projects, setProjects] = useState<Project[]>([]);
 	const addDot = (text: string) => {
 		text += '.';
@@ -56,10 +58,18 @@ const Projects = () => {
 		void (async () => getProjects())();
 	}, []);
 
+	const {ref, inView} = useInView({
+		threshold: 0.5,
+	});
+
+	useEffect(() => {
+		onVisible(inView);
+	}, [inView]);
+
 	return (
 		<SectionWrapper sectionId='projects'>
 			<>
-				<div className='flex flex-col justify-center items-center xl:items-start xl:pr-5'>
+				<div className='flex flex-col justify-center items-center xl:items-start xl:pr-5' ref={ref}>
 					<SectionTitle>Projects</SectionTitle>
 					<div className='hidden xl:block'>
 						<Technologies />
@@ -117,6 +127,10 @@ const Projects = () => {
 			</>
 		</SectionWrapper>
 	);
+};
+
+Projects.propTypes = {
+	onVisible: PropTypes.func.isRequired,
 };
 
 export default Projects;

@@ -8,9 +8,17 @@ import SocialLinks from './components/SocialLinks';
 
 const App = () => {
 	const [showAllSection, setShowAllSection] = useState(false);
+	const [isProjectsSectionVisible, setIsProjectsSectionVisible] = useState(false);
+	const [isHandlerVisible, setIsHandlerVisible] = useState(false);
+	const [isAboutMeSectionVisible, setIsAboutMeSectionVisible] = useState(false);
+	const [isContactSectionVisible, setIsContactSectionVisible] = useState(false);
 
 	const navLinksHeader = (sectionId: string) => {
 		document.getElementById(sectionId)?.scrollIntoView();
+	};
+
+	const visibleHandler = (value: boolean, fn: (value: boolean) => void) => {
+		fn(value);
 	};
 
 	useEffect(() => {
@@ -22,13 +30,29 @@ const App = () => {
 	return (
 		<div className='snap-both snap-mandatory h-screen overflow-y-scroll bg-black text-white overflow-x-hidden xl:overflow-x-scroll xl:overflow-y-hidden xl:scrollbar-none scroll-smooth relative selection:text-black selection:bg-white'>
 			<div className='flex flex-col xl:flex-row w-max'>
-				<Header />
+				<Header
+					onVisible={(value) => {
+						visibleHandler(value, setIsHandlerVisible);
+					}}
+				/>
 				{showAllSection && (
 					<>
-						<AboutMe />
+						<AboutMe
+							onVisible={(value) => {
+								visibleHandler(value, setIsAboutMeSectionVisible);
+							}}
+						/>
 						<MyStack />
-						<Projects />
-						<Contact />
+						<Projects
+							onVisible={(value) => {
+								visibleHandler(value, setIsProjectsSectionVisible);
+							}}
+						/>
+						<Contact
+							onVisible={(value) => {
+								visibleHandler(value, setIsContactSectionVisible);
+							}}
+						/>
 					</>
 				)}
 			</div>
@@ -36,7 +60,9 @@ const App = () => {
 				<h1>Wojciech Pietraszuk</h1>
 				<nav className='flex gap-5'>
 					<button
-						className='relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase'
+						className={`relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase ${
+							isHandlerVisible ? 'text-yellow-500 after:w-full' : ''
+						}`}
 						type='button'
 						onClick={() => {
 							navLinksHeader('header');
@@ -45,7 +71,9 @@ const App = () => {
 						home
 					</button>
 					<button
-						className='relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase'
+						className={`relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase ${
+							isAboutMeSectionVisible ? 'text-yellow-500 after:w-full' : ''
+						}`}
 						type='button'
 						onClick={() => {
 							navLinksHeader('about-me');
@@ -54,7 +82,9 @@ const App = () => {
 						about me
 					</button>
 					<button
-						className='relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase'
+						className={`relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase ${
+							isProjectsSectionVisible ? 'text-yellow-500 after:w-full' : ''
+						}`}
 						type='button'
 						onClick={() => {
 							navLinksHeader('projects');
@@ -63,7 +93,9 @@ const App = () => {
 						projects
 					</button>
 					<button
-						className='relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase'
+						className={`relative font-thin text-3xl py-1 px-2 tracking-wider hover:text-yellow-500 transition-colors duration-300 after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-0 after:transition-[width] after:duration-300 after:h-[0.075rem] after:bg-yellow-500 uppercase ${
+							isContactSectionVisible ? 'text-yellow-500 after:w-full' : ''
+						}`}
 						type='button'
 						onClick={() => {
 							navLinksHeader('contact');
