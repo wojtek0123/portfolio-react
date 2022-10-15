@@ -13,9 +13,14 @@ const App = () => {
 	const [isHandlerVisible, setIsHandlerVisible] = useState(false);
 	const [isAboutMeSectionVisible, setIsAboutMeSectionVisible] = useState(false);
 	const [isContactSectionVisible, setIsContactSectionVisible] = useState(false);
+	const [openMenu, setOpenMenu] = useState(false);
 
 	const visibleHandler = (value: boolean, fn: (value: boolean) => void) => {
 		fn(value);
+	};
+
+	const hamburgerHandler = () => {
+		setOpenMenu((prevState) => !prevState);
 	};
 
 	useEffect(() => {
@@ -23,6 +28,10 @@ const App = () => {
 			setShowAllSection(true);
 		}, 0);
 	}, []);
+
+	useEffect(() => {
+		console.log(openMenu);
+	}, [openMenu]);
 
 	return (
 		<div className='snap-both snap-mandatory h-screen overflow-y-scroll bg-black text-white overflow-x-hidden xl:overflow-x-scroll xl:overflow-y-hidden xl:scrollbar-none scroll-smooth relative selection:text-black selection:bg-white'>
@@ -53,6 +62,30 @@ const App = () => {
 					</>
 				)}
 			</div>
+			<nav className='fixed top-5 right-5 w-12 h-10 bg-transparet xl:hidden flex items-center justify-center'>
+				<button
+					type='button'
+					title='Menu'
+					className='relative bg-transparent rounded w-12 h-10 p-1'
+					onClick={hamburgerHandler}
+				>
+					<span
+						className={`block absolute h-[0.2rem] w-10 rounded bg-white transition-transform duration-500 ease-in-out ${
+							openMenu ? 'translate-y-0 rotate-45' : '-translate-y-3 rotate-0'
+						}`}
+					></span>
+					<span
+						className={`block absolute h-[0.2rem] w-10 rounded bg-current transition-opacity duration-500 ease-in-out ${
+							openMenu ? 'opacity-0' : 'opacity-100'
+						}`}
+					></span>
+					<span
+						className={`block absolute h-[0.2rem] w-10 rounded bg-white transition-transform duration-500 ease-in-out ${
+							openMenu ? 'translate-y-0 -rotate-45' : 'translate-y-3 rotate-0'
+						}`}
+					></span>
+				</button>
+			</nav>
 			<div className='fixed top-0 left-0 right-0 justify-between items-center pt-5 hidden xl:flex px-10'>
 				<h1>Wojciech Pietraszuk</h1>
 				<nav className='flex gap-5'>
