@@ -91,7 +91,7 @@ const App = () => {
 					<li>
 						<button
 							type='button'
-							className='text-2xl'
+							className='text-2xl sm:text-3xl'
 							onClick={() => {
 								navLinksHandler('header');
 								hamburgerHandler();
@@ -103,7 +103,7 @@ const App = () => {
 					<li>
 						<button
 							type='button'
-							className='text-2xl'
+							className='text-2xl sm:text-3xl'
 							onClick={() => {
 								navLinksHandler('about-me');
 								hamburgerHandler();
@@ -115,7 +115,7 @@ const App = () => {
 					<li>
 						<button
 							type='button'
-							className='text-2xl'
+							className='text-2xl sm:text-3xl'
 							onClick={() => {
 								navLinksHandler('stack');
 								hamburgerHandler();
@@ -127,7 +127,7 @@ const App = () => {
 					<li>
 						<button
 							type='button'
-							className='text-2xl'
+							className='text-2xl sm:text-3xl'
 							onClick={() => {
 								navLinksHandler('projects');
 								hamburgerHandler();
@@ -139,7 +139,7 @@ const App = () => {
 					<li>
 						<button
 							type='button'
-							className='text-2xl'
+							className='text-2xl sm:text-3xl'
 							onClick={() => {
 								navLinksHandler('contact');
 								hamburgerHandler();
