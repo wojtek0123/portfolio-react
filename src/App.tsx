@@ -26,12 +26,8 @@ const App = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setShowAllSection(true);
-		}, 0);
+		}, 10);
 	}, []);
-
-	useEffect(() => {
-		console.log(openMenu);
-	}, [openMenu]);
 
 	return (
 		<div className='snap-both snap-mandatory h-screen overflow-y-scroll bg-black text-white overflow-x-hidden xl:overflow-x-scroll xl:overflow-y-hidden xl:scrollbar-none scroll-smooth relative selection:text-black selection:bg-white'>
@@ -85,6 +81,74 @@ const App = () => {
 						}`}
 					></span>
 				</button>
+			</nav>
+			<nav
+				className={`fixed bottom-0 left-0 w-full h-max flex flex-col items-center justify-center bg-black py-5 px-5 rounded-t-2xl border-t-2 sm:border-r-2 sm:border-l-2 border-yellow-500 sm:left-1/2 sm:-translate-x-1/2 transition-transform duration-500 ease-in-out sm:max-w-md xl:hidden ${
+					openMenu ? 'translate-y-0' : 'translate-y-full'
+				}`}
+			>
+				<ul className='flex flex-col items-center gap-y-3'>
+					<li>
+						<button
+							type='button'
+							className='text-2xl'
+							onClick={() => {
+								navLinksHandler('header');
+								hamburgerHandler();
+							}}
+						>
+							Home
+						</button>
+					</li>
+					<li>
+						<button
+							type='button'
+							className='text-2xl'
+							onClick={() => {
+								navLinksHandler('about-me');
+								hamburgerHandler();
+							}}
+						>
+							About me
+						</button>
+					</li>
+					<li>
+						<button
+							type='button'
+							className='text-2xl'
+							onClick={() => {
+								navLinksHandler('stack');
+								hamburgerHandler();
+							}}
+						>
+							Stack
+						</button>
+					</li>
+					<li>
+						<button
+							type='button'
+							className='text-2xl'
+							onClick={() => {
+								navLinksHandler('projects');
+								hamburgerHandler();
+							}}
+						>
+							Projects
+						</button>
+					</li>
+					<li>
+						<button
+							type='button'
+							className='text-2xl'
+							onClick={() => {
+								navLinksHandler('contact');
+								hamburgerHandler();
+							}}
+						>
+							Contact
+						</button>
+					</li>
+				</ul>
 			</nav>
 			<div className='fixed top-0 left-0 right-0 justify-between items-center pt-5 hidden xl:flex px-10'>
 				<h1>Wojciech Pietraszuk</h1>
