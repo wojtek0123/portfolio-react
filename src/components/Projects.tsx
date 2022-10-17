@@ -107,14 +107,16 @@ const Projects: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) 
 										>
 											Github
 										</a>
-										<a
-											href={project.demoLink}
-											rel='noopener noreferrer'
-											target='_blank'
-											className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
-										>
-											Live
-										</a>
+										{project.demoLink.length !== 0 && (
+											<a
+												href={project.demoLink}
+												rel='noopener noreferrer'
+												target='_blank'
+												className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
+											>
+												Live
+											</a>
+										)}
 									</div>
 								</div>
 							</div>
