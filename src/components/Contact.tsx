@@ -25,20 +25,21 @@ const Contact: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) =
 					<form
 						action='https://formsubmit.co/c94e1eed968e8af34282467c031a69b1'
 						method='POST'
-						className='grid gap-5 text-black mb-10'
+						className='grid gap-5 text-black mb-10 selection:text-white selection:bg-black'
 					>
 						<input
 							className='w-full xl:max-w-lg p-2 rounded text-xl'
 							type='email'
 							placeholder='your email'
 							pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+							name='email'
+							id='email'
 							required
 						/>
 						<input
-							className=''
-							type='hidden'
-							name='_subject'
-							value='Rekrutacja'
+							className='w-full xl:max-w-lg p-2 rounded text-xl'
+							type='text'
+							name='subject'
 							placeholder='subject'
 							required
 						/>
@@ -46,6 +47,7 @@ const Contact: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) =
 							className='p-2 rounded text-xl w-full xl:max-w-2xl h-40 xl:h-80 max-h-80'
 							placeholder='message'
 							name='message'
+							id='message'
 							required
 						></textarea>
 						<button
