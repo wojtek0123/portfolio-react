@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
 import Header from './components/Header';
@@ -6,7 +6,7 @@ import MyStack from './components/MyStack';
 import Projects from './components/Projects';
 import SocialLinks from './components/SocialLinks';
 import {navLinksHandler} from './utils/utils';
-import Draggable, {DraggableCore} from 'react-draggable';
+import Draggable from 'react-draggable';
 
 const App = () => {
 	const [showAllSection, setShowAllSection] = useState(false);
@@ -14,14 +14,9 @@ const App = () => {
 	const [isHandlerVisible, setIsHandlerVisible] = useState(false);
 	const [isAboutMeSectionVisible, setIsAboutMeSectionVisible] = useState(false);
 	const [isContactSectionVisible, setIsContactSectionVisible] = useState(false);
-	const [openMenu, setOpenMenu] = useState(false);
 
 	const visibleHandler = (value: boolean, fn: (value: boolean) => void) => {
 		fn(value);
-	};
-
-	const hamburgerHandler = () => {
-		setOpenMenu((prevState) => !prevState);
 	};
 
 	useEffect(() => {
@@ -59,41 +54,13 @@ const App = () => {
 					</>
 				)}
 			</div>
-			<nav className='fixed top-5 right-5 w-12 h-10 bg-transparet xl:hidden flex items-center justify-center'>
-				<button
-					type='button'
-					title='Menu'
-					className='relative bg-transparent rounded w-12 h-10 p-1'
-					onClick={hamburgerHandler}
-				>
-					<span
-						className={`block absolute h-[0.2rem] w-10 rounded bg-white transition-transform duration-500 ease-in-out ${
-							openMenu ? 'translate-y-0 rotate-45' : '-translate-y-3 rotate-0'
-						}`}
-					></span>
-					<span
-						className={`block absolute h-[0.2rem] w-10 rounded bg-current transition-opacity duration-500 ease-in-out ${
-							openMenu ? 'opacity-0' : 'opacity-100'
-						}`}
-					></span>
-					<span
-						className={`block absolute h-[0.2rem] w-10 rounded bg-white transition-transform duration-500 ease-in-out ${
-							openMenu ? 'translate-y-0 -rotate-45' : 'translate-y-3 rotate-0'
-						}`}
-					></span>
-				</button>
-			</nav>
 			<Draggable
 				axis='y'
 				grid={[10, 10]}
 				positionOffset={{y: 250, x: 0}}
 				bounds={{left: 0, right: 0, bottom: 0, top: -250}}
 			>
-				<nav
-					className={`fixed bottom-0 left-0 w-full h-max flex flex-col items-center justify-center bg-black py-5 px-5 rounded-t-2xl border-t-2 sm:border-r-2 sm:border-l-2 border-yellow-500 sm:left-1/2 sm:-translate-x-1/2 transition-transform duration-500 ease-in-out sm:max-w-md xl:hidden ${
-						openMenu ? 'translate-y-0' : 'translate-y-full'
-					}`}
-				>
+				<nav className='fixed bottom-0 left-0 w-full h-max flex flex-col items-center justify-center bg-black py-5 px-5 rounded-t-2xl border-t-2 sm:border-r-2 sm:border-l-2 border-yellow-500 sm:left-1/2 sm:-translate-x-1/2 transition-transform duration-500 ease-in-out sm:max-w-md xl:hidden'>
 					<div className='w-16 h-1 bg-white mb-10 rounded'></div>
 					<ul className='flex flex-col items-center gap-y-3'>
 						<li>
@@ -102,7 +69,6 @@ const App = () => {
 								className='text-2xl sm:text-3xl'
 								onClick={() => {
 									navLinksHandler('header');
-									hamburgerHandler();
 								}}
 							>
 								Home
@@ -114,7 +80,6 @@ const App = () => {
 								className='text-2xl sm:text-3xl'
 								onClick={() => {
 									navLinksHandler('about-me');
-									hamburgerHandler();
 								}}
 							>
 								About me
@@ -126,7 +91,6 @@ const App = () => {
 								className='text-2xl sm:text-3xl'
 								onClick={() => {
 									navLinksHandler('stack');
-									hamburgerHandler();
 								}}
 							>
 								Stack
@@ -138,7 +102,6 @@ const App = () => {
 								className='text-2xl sm:text-3xl'
 								onClick={() => {
 									navLinksHandler('projects');
-									hamburgerHandler();
 								}}
 							>
 								Projects
@@ -150,7 +113,6 @@ const App = () => {
 								className='text-2xl sm:text-3xl'
 								onClick={() => {
 									navLinksHandler('contact');
-									hamburgerHandler();
 								}}
 							>
 								Contact
