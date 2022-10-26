@@ -15,6 +15,5 @@
 #### Todo:
 
 - [x] graphCMS
-- [ ] typing animation for Hello in the header
 - [x] scroll spy
 - [x] horizontal scrolling on mouse scroll
