@@ -22,7 +22,7 @@ const Header: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) =>
 
 	return (
 		<header
-			className='sticky w-screen top-0 z-10 flex justify-center items-center bg-black w-screen min-h-screen overflow-x-hidden'
+			className='xl:sticky top-0 z-10 flex justify-center items-center bg-black w-screen min-h-screen overflow-x-hidden'
 			id='header'
 			ref={ref}
 		>

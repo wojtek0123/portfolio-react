@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
 import Header from './components/Header';
@@ -54,7 +54,7 @@ const App = () => {
 				}}
 			/>
 
-			<nav className='fixed top-5 right-5 w-12 h-10 bg-transparent xl:hidden flex items-center justify-center'>
+			<nav className='fixed top-5 right-5 w-12 h-10 bg-transparent xl:hidden flex items-center justify-center z-20'>
 				<button
 					type='button'
 					title='Menu'
@@ -78,8 +78,9 @@ const App = () => {
 					></span>
 				</button>
 			</nav>
+
 			<nav
-				className={`fixed bottom-0 left-0 w-full h-max flex flex-col items-center justify-center bg-black py-5 px-5 rounded-t-2xl border-t-2 sm:border-r-2 sm:border-l-2 border-yellow-500 sm:left-1/2 sm:-translate-x-1/2 transition-transform duration-500 ease-in-out sm:max-w-md xl:hidden ${
+				className={`fixed bottom-0 left-0 w-full h-max flex flex-col items-center justify-center bg-black py-5 px-5 rounded-t-2xl border-t-2 sm:border-r-2 sm:border-l-2 border-yellow-500 sm:left-1/2 sm:-translate-x-1/2 transition-transform duration-500 ease-in-out sm:max-w-md xl:hidden text-white z-20 ${
 					openMenu ? 'translate-y-0' : 'translate-y-full'
 				}`}
 			>
@@ -146,7 +147,8 @@ const App = () => {
 					</li>
 				</ul>
 			</nav>
-			<div className='fixed top-0 left-0 right-0 justify-between items-center pt-5 hidden xl:flex px-10'>
+
+			<div className='fixed top-0 left-0 right-0 justify-between items-center pt-5 hidden xl:flex px-10 z-20'>
 				<h1>Wojciech Pietraszuk</h1>
 				<nav className='flex gap-5'>
 					<button

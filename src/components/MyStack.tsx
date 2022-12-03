@@ -4,7 +4,7 @@ import image from '../assets/undraw_code_review.svg';
 import Technologies from './Technologies';
 
 const MyStack = () => (
-	<div className='xl:hidden sticky top-0 z-10'>
+	<div className='xl:hidden top-0 z-10'>
 		<SectionWrapper sectionId='stack'>
 			<>
 				<SectionTitle>My stack</SectionTitle>
