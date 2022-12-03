@@ -7,9 +7,6 @@ import githubIcon from '../assets/github.svg';
 import angularIcon from '../assets/angular.svg';
 import linkedInIcon from '../assets/linkedin-blue.svg';
 import vueIcon from '../assets/vuejs-icon.svg';
-import {useInView} from 'react-intersection-observer';
-import {useEffect} from 'react';
-import PropTypes from 'prop-types';
 
 const Header: React.FC = () => (
 	<header
@@ -24,7 +21,7 @@ const Header: React.FC = () => (
 						I&apos;m a Junior Frontend Developer
 					</h2>
 				</div>
-				<div className='flex w-full gap-x-2 sm:justify-start sm:gap-x-5 justify-evenly xl:gap-10 items-center'>
+				<div className='flex w-full gap-x-2 justify-start sm:gap-x-5 xl:gap-10 items-center'>
 					<button
 						type='button'
 						className='bg-white border border-white text-black px-5 sm:px-10 py-3 text-xl rounded hover:bg-slate-300 transition-colors'
