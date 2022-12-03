@@ -38,7 +38,7 @@ const queryProjects = gql`
 	}
 `;
 
-const Projects: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) => {
+const Projects: React.FC = () => {
 	const [projects, setProjects] = useState<Project[]>([]);
 	const addDot = (text: string) => {
 		text += '.';
@@ -57,18 +57,10 @@ const Projects: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) 
 		void (async () => getProjects())();
 	}, []);
 
-	const {ref, inView} = useInView({
-		threshold: 0.5,
-	});
-
-	useEffect(() => {
-		onVisible(inView);
-	}, [inView]);
-
 	return (
 		<SectionWrapper sectionId='projects'>
 			<>
-				<div className='flex flex-col justify-center items-center xl:items-start xl:pr-5' ref={ref}>
+				<div className='flex flex-col justify-center items-center xl:items-start xl:pr-5'>
 					<SectionTitle>Projects</SectionTitle>
 					<div className='hidden xl:block'>
 						<Technologies />
@@ -136,10 +128,6 @@ const Projects: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) 
 			</>
 		</SectionWrapper>
 	);
-};
-
-Projects.propTypes = {
-	onVisible: PropTypes.func.isRequired,
 };
 
 export default Projects;
