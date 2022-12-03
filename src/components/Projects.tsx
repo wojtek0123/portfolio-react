@@ -1,6 +1,5 @@
 import SectionTitle from './SectionTitle';
 import {v4 as uuid} from 'uuid';
-import ChangeSectionBtn from './ChangeSectionBtn';
 import SectionWrapper from './SectionWrapper';
 import Technologies from './Technologies';
 import {request, gql} from 'graphql-request';

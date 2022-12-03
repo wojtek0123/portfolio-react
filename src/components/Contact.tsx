@@ -1,7 +1,6 @@
 import SectionTitle from './SectionTitle';
 import SectionWrapper from './SectionWrapper';
 import background from '../assets/undraw_envelope.svg';
-import ChangeSectionBtn from './ChangeSectionBtn';
 import SocialLinks from './SocialLinks';
 import Footer from './Footer';
 import {useEffect} from 'react';

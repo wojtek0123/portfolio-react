@@ -4,7 +4,6 @@ import graphqlIcon from '../assets/graphql-logo-2.svg';
 import typescriptIcon from '../assets/typescript-brand.svg';
 import sassIcon from '../assets/sass-brand.svg';
 import githubIcon from '../assets/github.svg';
-import ChangeSectionBtn from './ChangeSectionBtn';
 import angularIcon from '../assets/angular.svg';
 import linkedInIcon from '../assets/linkedin-blue.svg';
 import vueIcon from '../assets/vuejs-icon.svg';

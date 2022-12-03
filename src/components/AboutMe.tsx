@@ -1,6 +1,5 @@
 import SectionTitle from './SectionTitle';
 import helloBackground from '../assets/undraw_hello.svg';
-import ChangeSectionBtn from './ChangeSectionBtn';
 import SectionWrapper from './SectionWrapper';
 import SocialLinks from './SocialLinks';
 import PropTypes from 'prop-types';
