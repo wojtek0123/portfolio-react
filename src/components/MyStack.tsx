@@ -9,7 +9,11 @@ const MyStack = () => (
 			<>
 				<SectionTitle>My stack</SectionTitle>
 				<Technologies />
-				<img src={image} alt='' className='mt-10 hidden sm:block' />
+				<img
+					src={image}
+					alt='The boy is walking towards and large browser window'
+					className='mt-10 hidden sm:block'
+				/>
 			</>
 		</SectionWrapper>
 	</div>

@@ -49,7 +49,7 @@ const Contact: React.FC = () => (
 				</form>
 				<SocialLinks smallSize={false} />
 			</div>
-			<img src={background} alt='' className='hidden xl:block' />
+			<img src={background} alt='The boy next to huge white envelope' className='hidden xl:block' />
 			<Footer />
 		</>
 	</SectionWrapper>

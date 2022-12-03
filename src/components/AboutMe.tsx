@@ -30,7 +30,11 @@ const AboutMe: React.FC = () => (
 					<p className='mt-5 text-2xl tracking-wider'>wojtekpietraszuk@gmail.com</p>
 				</div>
 			</div>
-			<img src={helloBackground} alt='' className='mt-10' />
+			<img
+				src={helloBackground}
+				alt='The boy sit on the chair and waving. There is a desk with personal computer and many books to read'
+				className='mt-10'
+			/>
 		</>
 	</SectionWrapper>
 );

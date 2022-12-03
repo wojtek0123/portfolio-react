@@ -31,7 +31,11 @@ const Header: React.FC = () => (
 					</button>
 				</div>
 			</div>
-			<img src={backgroundImage} alt='' className='' />
+			<img
+				src={backgroundImage}
+				alt='The boy who stand next to a laptop which reach to the belt of that boy'
+				className=''
+			/>
 		</div>
 		<div className='hidden xl:block absolute top-[80vh] left-[20vw] animate-[spin_infinite_5s_forwards_linear]'>
 			<img src={reactIcon} alt='' className='w-10 h-10' />
