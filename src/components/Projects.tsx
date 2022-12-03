@@ -134,8 +134,6 @@ const Projects: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) 
 						</a>
 					</div>
 				</div>
-				<ChangeSectionBtn isRight={false} sectionId='about-me' sectionName='about me' />
-				<ChangeSectionBtn isRight={true} sectionId='contact' sectionName='contact' />
 			</>
 		</SectionWrapper>
 	);

@@ -23,7 +23,7 @@ const Header: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) =>
 
 	return (
 		<header
-			className='relative flex justify-center items-center w-screen snap-start xl:snap-center min-h-screen overflow-x-hidden'
+			className='sticky w-screen top-0 z-10 flex justify-center items-center bg-black w-screen min-h-screen overflow-x-hidden'
 			id='header'
 			ref={ref}
 		>
@@ -43,29 +43,8 @@ const Header: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) =>
 						>
 							Contact
 						</button>
-						<button
-							type='button'
-							className='border border-white text-white px-5 sm:px-10 py-3 text-xl rounded bg-black hover:bg-zinc-900'
-							onClick={() => document.getElementById('about-me')?.scrollIntoView()}
-						>
-							Next section
-						</button>
-						<div className='relative group hidden xl:block'>
-							<svg
-								className='w-14 h-14 fill-yellow-500 hover:fill-white transition-colors hidden xl:block'
-								viewBox='0 0 512 512'
-							>
-								<path d='M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464zM256 336c-18 0-32 14-32 32s13.1 32 32 32c17.1 0 32-14 32-32S273.1 336 256 336zM289.1 128h-51.1C199 128 168 159 168 198c0 13 11 24 24 24s24-11 24-24C216 186 225.1 176 237.1 176h51.1C301.1 176 312 186 312 198c0 8-4 14.1-11 18.1L244 251C236 256 232 264 232 272V288c0 13 11 24 24 24S280 301 280 288V286l45.1-28c21-13 34-36 34-60C360 159 329 128 289.1 128z' />
-							</svg>
-							<div className='absolute hidden w-max bottom-0 translate-x-full translate-y-8 -right-3 bg-white shadow-lg text-black px-5 py-5 rounded z-10 text-xl group-hover:block'>
-								<p>This page is horizontal. To scroll</p>
-								<p className='font-bold'>press &apos;shift&apos; and use scroll in the mouse</p>
-								<p>or use touchpad in the laptop to scroll horizontally</p>
-							</div>
-						</div>
 					</div>
 				</div>
-				<ChangeSectionBtn isRight={true} sectionId='about-me' sectionName='about me' />
 				<img src={backgroundImage} alt='' className='' />
 			</div>
 			<div className='hidden xl:block absolute top-[80vh] left-[20vw] animate-[spin_infinite_5s_forwards_linear]'>

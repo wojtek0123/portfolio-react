@@ -41,8 +41,6 @@ const AboutMe: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) =
 					</div>
 				</div>
 				<img src={helloBackground} alt='' className='mt-10' />
-				<ChangeSectionBtn isRight={true} sectionId='projects' sectionName='projects' />
-				<ChangeSectionBtn isRight={false} sectionId='header' sectionName='home' />
 			</>
 		</SectionWrapper>
 	);

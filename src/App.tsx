@@ -30,35 +30,31 @@ const App = () => {
 	}, []);
 
 	return (
-		<div className='snap-both snap-mandatory h-screen overflow-y-scroll bg-black text-white overflow-x-hidden xl:overflow-x-scroll xl:overflow-y-hidden xl:scrollbar-none scroll-smooth relative selection:text-black selection:bg-white'>
-			<div className='flex flex-col xl:flex-row w-max'>
-				<Header
-					onVisible={(value) => {
-						visibleHandler(value, setIsHandlerVisible);
-					}}
-				/>
-				{showAllSection && (
-					<>
-						<AboutMe
-							onVisible={(value) => {
-								visibleHandler(value, setIsAboutMeSectionVisible);
-							}}
-						/>
-						<MyStack />
-						<Projects
-							onVisible={(value) => {
-								visibleHandler(value, setIsProjectsSectionVisible);
-							}}
-						/>
-						<Contact
-							onVisible={(value) => {
-								visibleHandler(value, setIsContactSectionVisible);
-							}}
-						/>
-					</>
-				)}
-			</div>
-			<nav className='fixed top-5 right-5 w-12 h-10 bg-transparet xl:hidden flex items-center justify-center'>
+		<div className='relative text-white'>
+			<Header
+				onVisible={(value) => {
+					visibleHandler(value, setIsHandlerVisible);
+				}}
+			/>
+
+			<AboutMe
+				onVisible={(value) => {
+					visibleHandler(value, setIsAboutMeSectionVisible);
+				}}
+			/>
+			<MyStack />
+			<Projects
+				onVisible={(value) => {
+					visibleHandler(value, setIsProjectsSectionVisible);
+				}}
+			/>
+			<Contact
+				onVisible={(value) => {
+					visibleHandler(value, setIsContactSectionVisible);
+				}}
+			/>
+
+			<nav className='fixed top-5 right-5 w-12 h-10 bg-transparent xl:hidden flex items-center justify-center'>
 				<button
 					type='button'
 					title='Menu'

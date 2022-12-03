@@ -60,7 +60,6 @@ const Contact: React.FC<{onVisible: (value: boolean) => void}> = ({onVisible}) =
 					<SocialLinks smallSize={false} />
 				</div>
 				<img src={background} alt='' className='hidden xl:block' />
-				<ChangeSectionBtn isRight={false} sectionId='projects' sectionName='projects' />
 				<Footer />
 			</>
 		</SectionWrapper>
