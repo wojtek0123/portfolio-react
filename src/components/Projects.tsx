@@ -11,12 +11,15 @@ type Project = {
 	id: string;
 	title: string;
 	technologies: string[];
+	order: number;
 	image: {
 		url: string;
 	};
 	githubLink: string;
 	demoLink: string;
 	description: string;
+	createdAt: number;
+	publishedAt: number;
 };
 
 const queryProjects = gql`
@@ -30,6 +33,7 @@ const queryProjects = gql`
 			publishedAt
 			technologies
 			title
+			order
 			updatedAt
 			image {
 				url
@@ -50,7 +54,8 @@ const Projects: React.FC = () => {
 			import.meta.env.VITE_CMS_API,
 			queryProjects,
 		);
-		setProjects(response.projects);
+		const sortedProjects = response.projects.sort((a, b) => a.order - b.order);
+		setProjects(sortedProjects);
 	};
 
 	useEffect(() => {
