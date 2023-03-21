@@ -8,7 +8,7 @@ import MyStack from './components/MyStack';
 import Projects from './components/Projects';
 
 const App = () => (
-	<div className='relative text-white'>
+	<div className='h-screen overflow-y-scroll bg-black text-white overflow-x-hidden xl:overflow-y-scroll xl:overflow-x-hidden xl:scrollbar-none scroll-smooth relative selection:text-black selection:bg-white'>
 		<MobileNavigation />
 		<DesktopNavigation />
 		<Header />

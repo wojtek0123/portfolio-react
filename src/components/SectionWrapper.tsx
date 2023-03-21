@@ -6,7 +6,7 @@ const SectionWrapper: React.FC<{children: JSX.Element; sectionId: string}> = ({
 }) => (
 	<section
 		id={sectionId}
-		className='xl:sticky top-0 z-10 overflow-hidden w-screen min-h-screen bg-black flex flex-col items-center justify-center border-t-2 border-yellow-500'
+		className='relative w-screen min-h-screen bg-black snap-start flex flex-col items-center justify-center'
 	>
 		<div className='grid xl:grid-cols-2 max-w-[80vw] w-full'>{children}</div>
 	</section>
