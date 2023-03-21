@@ -3,9 +3,6 @@ import SectionWrapper from './SectionWrapper';
 import background from '../assets/undraw_envelope.svg';
 import SocialLinks from './SocialLinks';
 import Footer from './Footer';
-import {useEffect} from 'react';
-import {useInView} from 'react-intersection-observer';
-import PropTypes from 'prop-types';
 
 const Contact: React.FC = () => (
 	<SectionWrapper sectionId='contact'>

@@ -2,9 +2,6 @@ import SectionTitle from './SectionTitle';
 import helloBackground from '../assets/undraw_hello.svg';
 import SectionWrapper from './SectionWrapper';
 import SocialLinks from './SocialLinks';
-import PropTypes from 'prop-types';
-import {useInView} from 'react-intersection-observer';
-import {useEffect} from 'react';
 
 const AboutMe: React.FC = () => (
 	<SectionWrapper sectionId='about-me'>

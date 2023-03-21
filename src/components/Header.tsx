@@ -10,7 +10,7 @@ import vueIcon from '../assets/vuejs-icon.svg';
 
 const Header: React.FC = () => (
 	<header
-		className='xl:sticky top-0 z-10 flex justify-center items-center bg-black w-screen min-h-screen overflow-x-hidden'
+		className='relative flex justify-center items-center w-screen snap-start xl:snap-center min-h-screen overflow-x-hidden'
 		id='header'
 	>
 		<div className='grid xl:grid-cols-2'>
@@ -18,7 +18,7 @@ const Header: React.FC = () => (
 				<div>
 					<span className='text-5xl md:text-8xl xl:text-9xl font-bold'>Hello!</span>
 					<h2 className='text-4xl font-bold mt-5 xl:text-6xl'>
-						I&apos;m a Junior Frontend Developer
+						I&apos;m a Junior Front-end Developer
 					</h2>
 				</div>
 				<div className='flex w-full gap-x-2 justify-start sm:gap-x-5 xl:gap-10 items-center'>
