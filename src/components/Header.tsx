@@ -5,6 +5,7 @@ import typescriptIcon from '../assets/typescript-brand.svg';
 import sassIcon from '../assets/sass-brand.svg';
 import githubIcon from '../assets/github.svg';
 import angularIcon from '../assets/angular.svg';
+import rxjsIcon from '../assets/rxjs_logo.svg';
 import linkedInIcon from '../assets/linkedin-blue.svg';
 import vueIcon from '../assets/vuejs-icon.svg';
 
@@ -61,7 +62,7 @@ const Header: React.FC = () => (
 			<img src={githubIcon} alt='' className='w-10 h-10' />
 		</div>
 		<div className='hidden lg:block absolute top-[10vh] left-[40vw] animate-[spin_infinite_10s_forwards_linear]'>
-			<img src={angularIcon} alt='' className='w-12 h-12' />
+			<img src={rxjsIcon} alt='' className='w-12 h-12' />
 		</div>
 		<div className='hidden lg:block absolute top-[53vh] left-[45vw] animate-[spin_infinite_10s_forwards_reverse_linear]'>
 			<img src={angularIcon} alt='' className='w-12 h-12' />
