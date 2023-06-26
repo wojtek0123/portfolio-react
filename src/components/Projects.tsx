@@ -6,6 +6,7 @@ import {request, gql} from 'graphql-request';
 import {useEffect, useState} from 'react';
 import {useInView} from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 type Project = {
 	id: string;
@@ -113,6 +114,12 @@ const Projects: React.FC = () => {
 												Live
 											</a>
 										)}
+										<Link
+											className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
+											to={`/project/${project.id}`}
+										>
+											Details
+										</Link>
 									</div>
 								</div>
 							</div>
