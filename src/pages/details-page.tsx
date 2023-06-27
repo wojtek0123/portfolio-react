@@ -6,6 +6,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import githubIcon from '../assets/github.svg';
 import boxArrow from '../assets/box-arrow-up-right.svg';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 type ProjectDetails = {
 	id: string;
@@ -18,9 +19,12 @@ type ProjectDetails = {
 	};
 };
 
+type Status = 'idle' | 'failed' | 'loading' | 'succeed';
+
 export default function DetailsPage() {
 	const [project, setProject] = useState<ProjectDetails>();
 	const {id} = useParams();
+	const [status, setStatus] = useState<Status>('idle');
 
 	const getProjects = async () => {
 		const queryProjects = gql`
@@ -44,13 +48,24 @@ export default function DetailsPage() {
 			queryProjects,
 		);
 
+		if (response.projects.length === 0) {
+			setStatus('failed');
+			return;
+		}
+
 		const project = response.projects.filter((project) => project.id === id)[0];
 		setProject(project);
+		setStatus('succeed');
 	};
 
 	useEffect(() => {
+		setStatus('loading');
 		void (async () => getProjects())();
 	}, [id]);
+
+	if (status === 'loading') {
+		return <LoadingSpinner />;
+	}
 
 	return (
 		<div className='bg-black min-h-screen w-full text-white'>
