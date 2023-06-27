@@ -39,6 +39,7 @@ export default function DetailsPage() {
 		`;
 
 		const response = await request<{projects: ProjectDetails[]}>(
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 			import.meta.env.VITE_CMS_API,
 			queryProjects,
 		);
@@ -94,7 +95,7 @@ export default function DetailsPage() {
 							<span>live</span>
 						</a>
 					</div>
-					<ReactMarkdown className='markdown'>{project?.readme}</ReactMarkdown>
+					<ReactMarkdown className='markdown'>{project?.readme ?? ''}</ReactMarkdown>
 				</main>
 			</div>
 		</div>
