@@ -8,8 +8,9 @@ import angularIcon from '../assets/angular.svg';
 import rxjsIcon from '../assets/rxjs_logo.svg';
 import linkedInIcon from '../assets/linkedin-blue.svg';
 import vueIcon from '../assets/vuejs-icon.svg';
+import {navLinksHandler} from '../utils/utils';
 
-const Header: React.FC = () => (
+const Header = () => (
 	<header
 		className='relative flex justify-center items-center w-screen snap-start xl:snap-center min-h-screen overflow-x-hidden'
 		id='header'
@@ -25,8 +26,10 @@ const Header: React.FC = () => (
 				<div className='flex w-full gap-x-2 justify-start sm:gap-x-5 xl:gap-10 items-center'>
 					<button
 						type='button'
-						className='bg-white border border-white text-black px-5 sm:px-10 py-3 text-xl rounded hover:bg-slate-300 transition-colors'
-						onClick={() => document.getElementById('contact')?.scrollIntoView()}
+						className='bg-white text-black px-5 sm:px-10 py-3 text-xl rounded hover:bg-slate-300 transition-colors'
+						onClick={() => {
+							navLinksHandler('contact');
+						}}
 					>
 						Contact
 					</button>
@@ -39,12 +42,20 @@ const Header: React.FC = () => (
 			/>
 		</div>
 		<div className='hidden xl:flex absolute left-1/2 bottom-10 animate-wiggle items-center justify-center'>
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-arrow-left mr-2 mt-1" viewBox="0 0 16 16">
-				<path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width='24'
+				height='24'
+				fill='currentColor'
+				className='bi bi-arrow-left mr-2 mt-1'
+				viewBox='0 0 16 16'
+			>
+				<path
+					fillRule='evenodd'
+					d='M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z'
+				/>
 			</svg>
-			<span className=''>
-				scroll down
-			</span>
+			<span className=''>scroll down</span>
 		</div>
 		<div className='hidden xl:block absolute top-[80vh] left-[20vw] animate-[spin_infinite_5s_forwards_linear]'>
 			<img src={reactIcon} alt='' className='w-10 h-10' />

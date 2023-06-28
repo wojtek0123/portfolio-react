@@ -10,7 +10,7 @@ const Links: React.FC<{smallSize: boolean}> = ({smallSize}) => (
 			target='_blank'
 		>
 			<svg
-				className='fill-white hover:fill-yellow-500 transition-colors duration-300'
+				className='fill-white hover:fill-slate-300 transition-colors duration-300'
 				viewBox='0 0 16 16'
 				style={{width: smallSize ? '1.5rem' : '2.5rem', height: smallSize ? '1.5rem' : '2.5rem'}}
 			>
@@ -25,7 +25,7 @@ const Links: React.FC<{smallSize: boolean}> = ({smallSize}) => (
 			target='_blank'
 		>
 			<svg
-				className='fill-white hover:fill-yellow-500 transition-colors duration-300'
+				className='fill-white hover:fill-slate-300 transition-colors duration-300'
 				viewBox='0 0 16 16'
 				style={{width: smallSize ? '1.5rem' : '2.5rem', height: smallSize ? '1.5rem' : '2.5rem'}}
 			>
@@ -40,7 +40,7 @@ const Links: React.FC<{smallSize: boolean}> = ({smallSize}) => (
 			target='_blank'
 		>
 			<svg
-				className='fill-white hover:fill-yellow-500 transition-colors duration-300'
+				className='fill-white hover:fill-slate-300 transition-colors duration-300'
 				viewBox='0 0 16 16'
 				style={{width: smallSize ? '1.5rem' : '2.5rem', height: smallSize ? '1.5rem' : '2.5rem'}}
 			>

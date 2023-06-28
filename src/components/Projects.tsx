@@ -72,13 +72,17 @@ const Projects: React.FC = () => {
 						<Technologies />
 					</div>
 				</div>
-				<div className='overflow-y-scroll w-full max-h-[65vh] xl:max-h-[80vh] pr-5 pl-1 xl:pl-0  scrollbar-thumb-yellow-500 scrollbar-track-gray-100 scrollbar-thin scrollbar-rounded-[1rem]'>
+				<div className='overflow-y-scroll w-full max-h-[65vh] xl:max-h-[80vh] pr-5 pl-1 xl:pl-0  scrollbar-thumb-[#2f2e41] scrollbar-track-gray-100 scrollbar-thin scrollbar-rounded-[1rem]'>
 					{projects.map((project) => (
 						<div key={project.id} className='w-full text-white bg-black'>
 							<h2 className='text-center text-2xl mb-5'>{project.title}</h2>
 							<div className='grid 2xl:grid-cols-2 xl:gap-5'>
 								<a href={project.demoLink} rel='noopener noreferrer' target='_blank'>
-									<img src={project.image.url} alt={`${project.title} home page screenshot`} />
+									<img
+										src={project.image.url}
+										alt={`${project.title} home page screenshot`}
+										loading='lazy'
+									/>
 								</a>
 								<div className='mt-5 xl:mt-0'>
 									<div className='text-lg'>
@@ -90,7 +94,7 @@ const Projects: React.FC = () => {
 									<h4 className='mt-3 text-lg'>Built with:</h4>
 									<div className='flex flex-wrap gap-1'>
 										{project.technologies.map((technology) => (
-											<span key={uuid()} className='text-black bg-white px-2 py-1 rounded'>
+											<span key={uuid()} className='text-white  bg-[#2f2e41] px-2 py-1 rounded'>
 												{technology}
 											</span>
 										))}
@@ -100,7 +104,7 @@ const Projects: React.FC = () => {
 											href={project.githubLink}
 											rel='noopener noreferrer'
 											target='_blank'
-											className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
+											className='bg-white text-black px-5 py-2 rounded hover:bg-slate-300 transition-colors'
 										>
 											Github
 										</a>
@@ -109,13 +113,13 @@ const Projects: React.FC = () => {
 												href={project.demoLink}
 												rel='noopener noreferrer'
 												target='_blank'
-												className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
+												className='bg-white text-black px-5 py-2 rounded hover:bg-slate-300 transition-colors'
 											>
 												Live
 											</a>
 										)}
 										<Link
-											className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
+											className='bg-white text-black px-5 py-2 rounded hover:bg-slate-300 transition-colors'
 											to={`/project/${project.id}`}
 										>
 											Details
@@ -131,9 +135,9 @@ const Projects: React.FC = () => {
 							href='https://github.com/wojtek0123?tab=repositories'
 							rel='noopener noreferrer'
 							target='_blank'
-							className='border border-white bg-black text-white px-5 py-3 rounded hover:bg-zinc-900 transition-colors text-xl sm:px-10'
+							className='bg-white text-black px-5 py-3 rounded hover:bg-slate-300 transition-colors text-xl sm:px-10'
 						>
-							See more
+							Github repos
 						</a>
 					</div>
 				</div>
