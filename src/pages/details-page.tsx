@@ -83,7 +83,7 @@ export default function DetailsPage() {
 					)}
 					{!project?.video && (
 						<img
-							className='mx-auto object-cover'
+							className='mx-auto object-cover lg:max-h-[70vh]'
 							src={project?.image.url}
 							alt='Screenshot of the project header'
 						/>
@@ -95,20 +95,22 @@ export default function DetailsPage() {
 							href={project?.githubLink}
 							rel='noopener noreferrer'
 							target='_blank'
-							className='flex gap-2 px-5 py-2 rounded hover:bg-yellow-500 transition-colors'
+							className='flex gap-2 px-5 py-2 rounded hover:border-slate-300 border border-black transition-colors'
 						>
 							<img src={githubIcon} alt='github icon' />
 							<span>repo</span>
 						</a>
-						<a
-							href={project?.demoLink}
-							rel='noopener noreferrer'
-							target='_blank'
-							className='flex gap-2 px-5 py-2 rounded hover:bg-yellow-500 transition-colors'
-						>
-							<img src={boxArrow} alt='live demo link' />
-							<span>live</span>
-						</a>
+						{project?.demoLink && (
+							<a
+								href={project.demoLink}
+								rel='noopener noreferrer'
+								target='_blank'
+								className='flex gap-2 px-5 py-2 rounded hover:border-slate-300 border border-black transition-colors'
+							>
+								<img src={boxArrow} alt='live demo link' />
+								<span>live</span>
+							</a>
+						)}
 					</div>
 					<ReactMarkdown className='markdown'>{project?.readme ?? ''}</ReactMarkdown>
 				</main>

@@ -2,43 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	body {
+		@apply scrollbar-thumb-[#2f2e41] scrollbar-track-gray-100 scrollbar-thin overflow-x-hidden;
+	}
+
+	.markdown h1 {
+		 font-size: 5rem;
+		 margin: 2rem 0;
+		 text-align: center;
+	 }
+
+	.markdown h2 {
+		font-size: 2rem;
+		margin: 1rem 0;
+	}
+
+	.markdown p {
+		font-size: 1rem;
+	}
+
+	.markdown a {
+		text-decoration: underline;
+	}
+
+	.markdown ul {
+		list-style-type: disc;
+		margin-left: 1.5rem;
+	}
+
+	.markdown code {
+		font-style: italic;
+	}
+
+	.markdown img {
+		margin-bottom: 1rem;
+	}
+
+}
+
 html {
 	font-family: 'Oswald', sans-serif;
 	scroll-behavior: smooth;
-}
-
-body {
-	overflow-x: hidden;
-}
-
-.markdown h1 {
-	font-size: 5rem;
-	margin: 2rem 0;
-	text-align: center;
-}
-
-.markdown h2 {
-	font-size: 2rem;
-	margin: 1rem 0;
-}
-
-.markdown p {
-	font-size: 1rem;
-}
-
-.markdown a {
-	text-decoration: underline;
-}
-
-.markdown ul {
-	list-style-type: disc;
-	margin-left: 1.5rem;
-}
-
-.markdown code {
-	font-style: italic;
-}
-
-.markdown img {
-	margin-bottom: 1rem;
 }
