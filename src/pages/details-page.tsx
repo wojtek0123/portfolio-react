@@ -68,7 +68,7 @@ export default function DetailsPage() {
 	}
 
 	return (
-		<div className='bg-black min-h-screen w-full text-white'>
+		<div className='min-h-screen w-full bg-black text-white'>
 			<MobileNavigation />
 			<DesktopNavigation />
 			<div className='xl:pt-16'>
@@ -89,13 +89,13 @@ export default function DetailsPage() {
 						/>
 					)}
 				</header>
-				<main className='max-w-4xl mx-auto pb-5 px-2 relative'>
-					<div className='text-white flex items-center justify-evenly mt-5 gap-2'>
+				<main className='relative mx-auto max-w-4xl px-2 pb-5'>
+					<div className='mt-5 flex items-center justify-evenly gap-2 text-white'>
 						<a
 							href={project?.githubLink}
 							rel='noopener noreferrer'
 							target='_blank'
-							className='flex gap-2 px-5 py-2 rounded hover:border-slate-300 border border-black transition-colors'
+							className='flex gap-2 rounded border border-black px-5 py-2 transition-colors hover:border-slate-300'
 						>
 							<img src={githubIcon} alt='github icon' />
 							<span>repo</span>
@@ -105,7 +105,7 @@ export default function DetailsPage() {
 								href={project.demoLink}
 								rel='noopener noreferrer'
 								target='_blank'
-								className='flex gap-2 px-5 py-2 rounded hover:border-slate-300 border border-black transition-colors'
+								className='flex gap-2 rounded border border-black px-5 py-2 transition-colors hover:border-slate-300'
 							>
 								<img src={boxArrow} alt='live demo link' />
 								<span>live</span>

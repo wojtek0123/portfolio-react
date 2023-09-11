@@ -1,8 +1,8 @@
 import spinner from '../assets/spinner-solid.svg';
 
 const LoadingSpinner = () => (
-	<div className='min-h-screen w-full bg-black flex items-center justify-center'>
-		<img src={spinner} alt='Loading spinner' className='animate-spin w-20' />
+	<div className='flex min-h-screen w-full items-center justify-center bg-black'>
+		<img src={spinner} alt='Loading spinner' className='w-20 animate-spin' />
 	</div>
 );
 

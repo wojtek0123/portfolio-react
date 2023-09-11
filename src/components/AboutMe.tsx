@@ -19,7 +19,7 @@ const AboutMe: React.FC = () => {
 					I&apos;m interested in new technologies and sports like cycling and running.
 				</p>
 			</div>
-			<div className='mt-10 hidden sm:px-5 sm:flex sm:flex-col xl:px-0'>
+			<div className='mt-10 hidden sm:flex sm:flex-col sm:px-5 xl:px-0'>
 				<SocialLinks smallSize={false} />
 				<p className='mt-5 text-2xl tracking-wider'>wojtekpietraszuk@gmail.com</p>
 			</div>

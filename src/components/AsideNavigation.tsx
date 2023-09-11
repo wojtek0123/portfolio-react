@@ -1,8 +1,8 @@
 import {navLinksHandler} from '../utils/utils';
 
 const AsideNavigation = () => (
-	<nav className='fixed left-2 top-1/2 -translate-y-1/2 z-20'>
-		<ul className='list-none flex flex-col gap-2'>
+	<nav className='fixed left-2 top-1/2 z-20 -translate-y-1/2'>
+		<ul className='flex list-none flex-col gap-2'>
 			<li>
 				<button
 					className='text-xl'

@@ -10,32 +10,32 @@ const MobileNavigation = () => {
 
 	return (
 		<>
-			<nav className='fixed top-5 right-5 w-12 h-10 bg-transparent xl:hidden flex items-center justify-center z-20'>
+			<nav className='fixed right-5 top-5 z-20 flex h-10 w-12 items-center justify-center bg-transparent xl:hidden'>
 				<button
 					type='button'
 					title='Menu'
-					className='relative bg-transparent rounded w-12 h-10 p-1'
+					className='relative h-10 w-12 rounded bg-transparent p-1'
 					onClick={hamburgerHandler}
 				>
 					<span
-						className={`block absolute h-[0.2rem] w-10 rounded bg-white transition-transform duration-500 ease-in-out ${
+						className={`absolute block h-[0.2rem] w-10 rounded bg-white transition-transform duration-500 ease-in-out ${
 							openMenu ? 'translate-y-0 rotate-45' : '-translate-y-3 rotate-0'
 						}`}
 					></span>
 					<span
-						className={`block absolute h-[0.2rem] w-10 rounded bg-current transition-opacity duration-500 ease-in-out ${
+						className={`absolute block h-[0.2rem] w-10 rounded bg-current transition-opacity duration-500 ease-in-out ${
 							openMenu ? 'opacity-0' : 'opacity-100'
 						}`}
 					></span>
 					<span
-						className={`block absolute h-[0.2rem] w-10 rounded bg-white transition-transform duration-500 ease-in-out ${
+						className={`absolute block h-[0.2rem] w-10 rounded bg-white transition-transform duration-500 ease-in-out ${
 							openMenu ? 'translate-y-0 -rotate-45' : 'translate-y-3 rotate-0'
 						}`}
 					></span>
 				</button>
 			</nav>
 			<nav
-				className={`fixed bottom-0 left-0 w-full h-max flex flex-col items-center justify-center bg-black py-5 px-5 rounded-t-2xl border-t-2 sm:border-r-2 sm:border-l-2 border-yellow-500 sm:left-1/2 sm:-translate-x-1/2 transition-transform duration-500 ease-in-out sm:max-w-md xl:hidden text-white z-20 ${
+				className={`fixed bottom-0 left-0 z-20 flex h-max w-full flex-col items-center justify-center rounded-t-2xl border-t-2 border-yellow-500 bg-black px-5 py-5 text-white transition-transform duration-500 ease-in-out sm:left-1/2 sm:max-w-md sm:-translate-x-1/2 sm:border-l-2 sm:border-r-2 xl:hidden ${
 					openMenu ? 'translate-y-0' : 'translate-y-full'
 				}`}
 			>

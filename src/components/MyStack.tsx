@@ -15,7 +15,7 @@ const MyStack = () => {
 	);
 
 	return (
-		<div className='xl:hidden top-0 z-10'>
+		<div className='top-0 z-10 xl:hidden'>
 			<SectionWrapper
 				sectionId='stack'
 				title='My stack'

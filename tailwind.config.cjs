@@ -4,19 +4,18 @@ module.exports = {
 	theme: {
 		extend: {
 			keyframes: {
-        wiggle: {
-          '0%, 100%': {
-						transform: 'rotate(-90deg) translateX(0)'
-						
+				wiggle: {
+					'0%, 100%': {
+						transform: 'rotate(-90deg) translateX(0)',
 					},
-          '50%': {
-						transform: 'rotate(-90deg) translateX(10%)'
+					'50%': {
+						transform: 'rotate(-90deg) translateX(10%)',
 					},
-        }
-      },
+				},
+			},
 			animation: {
-				wiggle: 'wiggle 1.5s ease-in-out infinite'
-			}
+				wiggle: 'wiggle 1.5s ease-in-out infinite',
+			},
 		},
 		fontFamily: {
 			'oswold-font': ['Oswald', 'sans-serif'],

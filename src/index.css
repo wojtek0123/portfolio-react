@@ -4,14 +4,14 @@
 
 @layer base {
 	body {
-		@apply scrollbar-thumb-[#2f2e41] scrollbar-track-gray-100 scrollbar-thin overflow-x-hidden;
+		@apply overflow-x-hidden scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-[#2f2e41];
 	}
 
 	.markdown h1 {
-		 font-size: 5rem;
-		 margin: 2rem 0;
-		 text-align: center;
-	 }
+		font-size: 5rem;
+		margin: 2rem 0;
+		text-align: center;
+	}
 
 	.markdown h2 {
 		font-size: 2rem;
@@ -38,7 +38,6 @@
 	.markdown img {
 		margin-bottom: 1rem;
 	}
-
 }
 
 html {

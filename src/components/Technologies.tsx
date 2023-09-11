@@ -16,8 +16,8 @@ import rxjsIcon from '../assets/rxjs_logo.svg';
 
 const Technologies = () => (
 	<>
-		<h4 className='text-3xl mb-5 2xl:text-4xl'>Technologies that I used in my projects</h4>
-		<div className='flex flex-wrap gap-5 w-full overflow-y-auto overflow-x-hidden max-h-[65vh] xl:max-h-[80vh] scrollbar-thumb-yellow-500 scrollbar-track-gray-100 scrollbar-thin scrollbar-rounded-[1rem]'>
+		<h4 className='mb-5 text-3xl 2xl:text-4xl'>Technologies that I used in my projects</h4>
+		<div className='scrollbar-rounded-[1rem] flex max-h-[65vh] w-full flex-wrap gap-5 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-yellow-500 xl:max-h-[80vh]'>
 			<img src={angularIcon} alt='angular icon logo' title='Angular' className='h-14 2xl:h-14' />
 			<img src={rxjsIcon} alt='graphql icon logo' className='h-14 2xl:h-14' title='RxJS' />
 			<img src={reactIcon} alt='react icon logo' className='h-14 2xl:h-14' title='React' />

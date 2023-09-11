@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Links: React.FC<{smallSize: boolean}> = ({smallSize}) => (
-	<div className='flex items-center justify-evenly xl:justify-start gap-5'>
+	<div className='flex items-center justify-evenly gap-5 xl:justify-start'>
 		<a
 			href='https://www.linkedin.com/in/wojciech-pietraszuk-333159199/'
 			rel='noopener noreferrer'
@@ -10,7 +10,7 @@ const Links: React.FC<{smallSize: boolean}> = ({smallSize}) => (
 			target='_blank'
 		>
 			<svg
-				className='fill-white hover:fill-slate-300 transition-colors duration-300'
+				className='fill-white transition-colors duration-300 hover:fill-slate-300'
 				viewBox='0 0 16 16'
 				style={{width: smallSize ? '1.5rem' : '2.5rem', height: smallSize ? '1.5rem' : '2.5rem'}}
 			>
@@ -25,7 +25,7 @@ const Links: React.FC<{smallSize: boolean}> = ({smallSize}) => (
 			target='_blank'
 		>
 			<svg
-				className='fill-white hover:fill-slate-300 transition-colors duration-300'
+				className='fill-white transition-colors duration-300 hover:fill-slate-300'
 				viewBox='0 0 16 16'
 				style={{width: smallSize ? '1.5rem' : '2.5rem', height: smallSize ? '1.5rem' : '2.5rem'}}
 			>
@@ -40,7 +40,7 @@ const Links: React.FC<{smallSize: boolean}> = ({smallSize}) => (
 			target='_blank'
 		>
 			<svg
-				className='fill-white hover:fill-slate-300 transition-colors duration-300'
+				className='fill-white transition-colors duration-300 hover:fill-slate-300'
 				viewBox='0 0 16 16'
 				style={{width: smallSize ? '1.5rem' : '2.5rem', height: smallSize ? '1.5rem' : '2.5rem'}}
 			>

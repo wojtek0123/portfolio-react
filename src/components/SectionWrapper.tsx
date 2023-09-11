@@ -9,18 +9,18 @@ const SectionWrapper: React.FC<{
 }> = ({children, sectionId, title, childBelowTitle}) => (
 	<section
 		id={sectionId}
-		className='relative w-screen min-h-screen bg-black snap-start flex flex-col items-center justify-center'
+		className='relative flex min-h-screen w-screen snap-start flex-col items-center justify-center bg-black'
 	>
-		<div className='grid xl:grid-cols-2 place-items-center max-w-[80vw] w-full xl:gap-10'>
-			<div className='flex flex-col justify-center items-center w-full xl:items-center'>
-				<div className='flex flex-col justify-center items-center w-full xl:items-center'>
-					<h3 className='text-center capitalize text-4xl mb-16 sm:text-5xl xl:text-7xl'>{title}</h3>
-					<div className='flex flex-col w-full items-center overflow-y-hidden overflow-x-hidden max-h-[65vh] xl:max-h-[80vh]'>
+		<div className='grid w-full max-w-[80vw] place-items-center xl:grid-cols-2 xl:gap-10'>
+			<div className='flex w-full flex-col items-center justify-center xl:items-center'>
+				<div className='flex w-full flex-col items-center justify-center xl:items-center'>
+					<h3 className='mb-16 text-center text-4xl capitalize sm:text-5xl xl:text-7xl'>{title}</h3>
+					<div className='flex max-h-[65vh] w-full flex-col items-center overflow-x-hidden overflow-y-hidden xl:max-h-[80vh]'>
 						{childBelowTitle}
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-col w-full items-center overflow-y-auto overflow-x-hidden max-h-[65vh] xl:max-h-[80vh] scrollbar-thumb-yellow-500 scrollbar-track-gray-100 scrollbar-thin scrollbar-rounded-[1rem]'>
+			<div className='scrollbar-rounded-[1rem] flex max-h-[65vh] w-full flex-col items-center overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-yellow-500 xl:max-h-[80vh]'>
 				{children}
 			</div>
 		</div>

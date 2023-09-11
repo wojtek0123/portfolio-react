@@ -9,10 +9,10 @@ const Contact: React.FC = () => {
 			<form
 				action='https://formsubmit.co/c94e1eed968e8af34282467c031a69b1'
 				method='POST'
-				className='flex flex-col gap-5 w-full min-[2300px]:w-1/2 text-black mb-10 selection:text-white selection:bg-black'
+				className='mb-10 flex w-full flex-col gap-5 text-black selection:bg-black selection:text-white min-[2300px]:w-1/2'
 			>
 				<input
-					className='w-full xl:max-w-2xl p-2 rounded text-xl'
+					className='w-full rounded p-2 text-xl xl:max-w-2xl'
 					type='email'
 					placeholder='your email'
 					pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
@@ -21,21 +21,21 @@ const Contact: React.FC = () => {
 					required
 				/>
 				<input
-					className='w-full xl:max-w-2xl p-2 rounded text-xl'
+					className='w-full rounded p-2 text-xl xl:max-w-2xl'
 					type='text'
 					name='subject'
 					placeholder='subject'
 					required
 				/>
 				<textarea
-					className='p-2 rounded text-xl w-full xl:max-w-2xl h-40 xl:h-80 max-h-80'
+					className='h-40 max-h-80 w-full rounded p-2 text-xl xl:h-80 xl:max-w-2xl'
 					placeholder='message'
 					name='message'
 					id='message'
 					required
 				></textarea>
 				<button
-					className='bg-white w-full xl:max-w-xs py-3 text-xl rounded text-black hover:bg-slate-300 transition-colors'
+					className='w-full rounded bg-white py-3 text-xl text-black transition-colors hover:bg-slate-300 xl:max-w-xs'
 					type='submit'
 				>
 					Submit

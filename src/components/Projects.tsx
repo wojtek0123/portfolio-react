@@ -69,9 +69,9 @@ const Projects: React.FC = () => {
 		<SectionWrapper sectionId='projects' title='Projects' childBelowTitle={technologiesNode}>
 			<>
 				{projects.map((project) => (
-					<div key={project.id} className='w-full text-white bg-black'>
-						<h2 className='text-center text-2xl mb-5'>{project.title}</h2>
-						<div className='grid 2xl:grid-cols-2 xl:gap-5'>
+					<div key={project.id} className='w-full bg-black text-white'>
+						<h2 className='mb-5 text-center text-2xl'>{project.title}</h2>
+						<div className='grid xl:gap-5 2xl:grid-cols-2'>
 							<a href={project.demoLink} rel='noopener noreferrer' target='_blank'>
 								<img src={project.image.url} alt={`${project.title} home page screenshot`} />
 							</a>
@@ -85,17 +85,17 @@ const Projects: React.FC = () => {
 								<h4 className='mt-3 text-lg'>Built with:</h4>
 								<div className='flex flex-wrap gap-1'>
 									{project.technologies.map((technology) => (
-										<span key={uuid()} className='text-black bg-white px-2 py-1 rounded'>
+										<span key={uuid()} className='rounded bg-white px-2 py-1 text-black'>
 											{technology}
 										</span>
 									))}
 								</div>
-								<div className='text-white flex items-center justify-evenly mt-5'>
+								<div className='mt-5 flex items-center justify-evenly text-white'>
 									<a
 										href={project.githubLink}
 										rel='noopener noreferrer'
 										target='_blank'
-										className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
+										className='rounded bg-yellow-500 px-5 py-2 text-black transition-colors hover:bg-yellow-600'
 									>
 										Github
 									</a>
@@ -104,7 +104,7 @@ const Projects: React.FC = () => {
 											href={project.demoLink}
 											rel='noopener noreferrer'
 											target='_blank'
-											className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
+											className='rounded bg-yellow-500 px-5 py-2 text-black transition-colors hover:bg-yellow-600'
 										>
 											Live
 										</a>
@@ -112,15 +112,15 @@ const Projects: React.FC = () => {
 								</div>
 							</div>
 						</div>
-						<div className='w-full h-[0.1rem] bg-white my-10'></div>
+						<div className='my-10 h-[0.1rem] w-full bg-white'></div>
 					</div>
 				))}
-				<div className='flex items-center justify-center mb-2'>
+				<div className='mb-2 flex items-center justify-center'>
 					<a
 						href='https://github.com/wojtek0123?tab=repositories'
 						rel='noopener noreferrer'
 						target='_blank'
-						className='border border-white bg-black text-white px-5 py-3 rounded hover:bg-zinc-900 transition-colors text-xl sm:px-10'
+						className='rounded border border-white bg-black px-5 py-3 text-xl text-white transition-colors hover:bg-zinc-900 sm:px-10'
 					>
 						See more
 					</a>
