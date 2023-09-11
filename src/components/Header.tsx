@@ -15,7 +15,7 @@ const Header = () => (
 		className='relative flex justify-center items-center w-screen snap-start xl:snap-center min-h-screen overflow-x-hidden'
 		id='header'
 	>
-		<div className='grid xl:grid-cols-2'>
+		<div className='grid xl:grid-cols-2 max-w-[80vw] w-full'>
 			<div className='flex flex-col items-start justify-start gap-y-8 md:gap-y-14 xl:gap-y-24 mb-10 px-5 md:mb-16'>
 				<div>
 					<span className='text-5xl md:text-8xl xl:text-9xl font-bold'>Hello!</span>
@@ -33,6 +33,15 @@ const Header = () => (
 					>
 						Contact
 					</button>
+					<a
+						href='https://github.com/wojtek0123'
+						target='_blank'
+						rel='noopener noreferrer'
+						type='button'
+						className='bg-white text-black px-5 sm:px-10 py-3 text-xl rounded hover:bg-slate-300 transition-colors'
+					>
+						Github
+					</a>
 				</div>
 			</div>
 			<img

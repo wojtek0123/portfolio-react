@@ -9,7 +9,7 @@ const AboutMe: React.FC = () => {
 				<p className='mb-3 text-2xl xl:text-4xl'>Hi, my name is Wojtek.</p>
 				<p className='xl:text-2xl'>
 					I&apos;m a student of computer science at the Warsaw University of Life Sciences.
-					Currently, I&apos;m in 6th term of engineering studies.
+					Currently, I&apos;m in 7th term of engineering studies.
 				</p>
 				<p className='mt-2 xl:text-2xl'>
 					I started my adventure with front-end development in July 2021. Since then, I have been
