@@ -4,9 +4,6 @@ import SectionWrapper from './SectionWrapper';
 import Technologies from './Technologies';
 import {request, gql} from 'graphql-request';
 import {useEffect, useState} from 'react';
-import {useInView} from 'react-intersection-observer';
-import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
 
 type Project = {
 	id: string;
@@ -52,7 +49,7 @@ const Projects: React.FC = () => {
 
 	const getProjects = async () => {
 		const response: {projects: Project[]} = await request(
-			import.meta.env.VITE_CMS_API,
+			import.meta.env.VITE_CMS_API as string,
 			queryProjects,
 		);
 		const sortedProjects = response.projects.sort((a, b) => a.order - b.order);
@@ -72,17 +69,13 @@ const Projects: React.FC = () => {
 						<Technologies />
 					</div>
 				</div>
-				<div className='overflow-y-scroll w-full max-h-[65vh] xl:max-h-[80vh] pr-5 pl-1 xl:pl-0  scrollbar-thumb-[#2f2e41] scrollbar-track-gray-100 scrollbar-thin'>
+				<div className='overflow-y-scroll w-full max-h-[65vh] xl:max-h-[80vh] pr-5 pl-1 xl:pl-0  scrollbar-thumb-yellow-500 scrollbar-track-gray-100 scrollbar-thin scrollbar-rounded-[1rem]'>
 					{projects.map((project) => (
 						<div key={project.id} className='w-full text-white bg-black'>
 							<h2 className='text-center text-2xl mb-5'>{project.title}</h2>
 							<div className='grid 2xl:grid-cols-2 xl:gap-5'>
 								<a href={project.demoLink} rel='noopener noreferrer' target='_blank'>
-									<img
-										src={project.image.url}
-										alt={`${project.title} home page screenshot`}
-										loading='lazy'
-									/>
+									<img src={project.image.url} alt={`${project.title} home page screenshot`} />
 								</a>
 								<div className='mt-5 xl:mt-0'>
 									<div className='text-lg'>
@@ -94,7 +87,7 @@ const Projects: React.FC = () => {
 									<h4 className='mt-3 text-lg'>Built with:</h4>
 									<div className='flex flex-wrap gap-1'>
 										{project.technologies.map((technology) => (
-											<span key={uuid()} className='text-white  bg-[#2f2e41] px-2 py-1 rounded'>
+											<span key={uuid()} className='text-black bg-white px-2 py-1 rounded'>
 												{technology}
 											</span>
 										))}
@@ -104,7 +97,7 @@ const Projects: React.FC = () => {
 											href={project.githubLink}
 											rel='noopener noreferrer'
 											target='_blank'
-											className='bg-white text-black px-5 py-2 rounded hover:bg-slate-300 transition-colors'
+											className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
 										>
 											Github
 										</a>
@@ -113,17 +106,11 @@ const Projects: React.FC = () => {
 												href={project.demoLink}
 												rel='noopener noreferrer'
 												target='_blank'
-												className='bg-white text-black px-5 py-2 rounded hover:bg-slate-300 transition-colors'
+												className='bg-yellow-500 text-black px-5 py-2 rounded hover:bg-yellow-600 transition-colors'
 											>
 												Live
 											</a>
 										)}
-										<Link
-											className='bg-white text-black px-5 py-2 rounded hover:bg-slate-300 transition-colors'
-											to={`/project/${project.id}`}
-										>
-											Details
-										</Link>
 									</div>
 								</div>
 							</div>
@@ -135,9 +122,9 @@ const Projects: React.FC = () => {
 							href='https://github.com/wojtek0123?tab=repositories'
 							rel='noopener noreferrer'
 							target='_blank'
-							className='bg-white text-black px-5 py-3 rounded hover:bg-slate-300 transition-colors text-xl sm:px-10'
+							className='border border-white bg-black text-white px-5 py-3 rounded hover:bg-zinc-900 transition-colors text-xl sm:px-10'
 						>
-							Github repos
+							See more
 						</a>
 					</div>
 				</div>

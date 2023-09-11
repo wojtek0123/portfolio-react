@@ -15,7 +15,8 @@ const AboutMe: React.FC = () => (
 						Currently, I&apos;m in 6th term of engineering studies.
 					</p>
 					<p className='mt-2 xl:text-2xl'>
-						I started my adventure with front-end development in July 2021. Since then, I have been continuously acquiring knowledge on this subject.
+						I started my adventure with front-end development in July 2021. Since then, I have been
+						continuously acquiring knowledge on this subject.
 					</p>
 					<p className='mt-2 xl:text-2xl'>
 						I&apos;m interested in new technologies and sports like cycling and running.
