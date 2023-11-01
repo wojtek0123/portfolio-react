@@ -69,6 +69,18 @@ const MobileNavigation = () => {
 							type='button'
 							className='text-2xl sm:text-3xl'
 							onClick={() => {
+								navLinksHandler('experience');
+								hamburgerHandler();
+							}}
+						>
+							Experience
+						</button>
+					</li>
+					<li>
+						<button
+							type='button'
+							className='text-2xl sm:text-3xl'
+							onClick={() => {
 								navLinksHandler('stack');
 								hamburgerHandler();
 							}}
