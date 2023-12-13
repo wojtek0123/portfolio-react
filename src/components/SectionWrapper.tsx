@@ -9,7 +9,7 @@ const SectionWrapper: React.FC<{
 }> = ({children, sectionId, title, childBelowTitle}) => (
 	<section
 		id={sectionId}
-		className='relative flex min-h-screen w-screen snap-start flex-col items-center justify-center bg-black'
+		className='relative flex min-h-[100svh] w-screen snap-start flex-col items-center justify-center bg-black'
 	>
 		<div className='grid w-full max-w-[80vw] place-items-center xl:grid-cols-2 xl:gap-10'>
 			<div className='flex w-full flex-col items-center justify-center xl:items-center'>
