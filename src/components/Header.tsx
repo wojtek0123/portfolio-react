@@ -20,10 +20,19 @@ const Header = () => (
 				<div>
 					<span className='text-5xl font-bold md:text-8xl xl:text-9xl'>Hello!</span>
 					<h2 className='mt-5 text-4xl font-bold xl:text-6xl'>
-						I&apos;m a Junior Front-end Developer
+						I&apos;m a Junior Front-End Developer
 					</h2>
 				</div>
 				<div className='flex w-full items-center justify-start gap-x-2 sm:gap-x-5 xl:gap-10'>
+					<a
+						href='https://github.com/wojtek0123'
+						target='_blank'
+						rel='noopener noreferrer'
+						type='button'
+						className='rounded bg-yellow-500 px-5 py-3 text-xl text-black transition-colors hover:bg-yellow-600 sm:px-10'
+					>
+						Github
+					</a>
 					<button
 						type='button'
 						className='rounded bg-white px-5 py-3 text-xl text-black transition-colors hover:bg-slate-300 sm:px-10'
@@ -33,15 +42,6 @@ const Header = () => (
 					>
 						Contact
 					</button>
-					<a
-						href='https://github.com/wojtek0123'
-						target='_blank'
-						rel='noopener noreferrer'
-						type='button'
-						className='rounded bg-white px-5 py-3 text-xl text-black transition-colors hover:bg-slate-300 sm:px-10'
-					>
-						Github
-					</a>
 				</div>
 			</div>
 			<img
