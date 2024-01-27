@@ -47,7 +47,7 @@ const Header = () => (
 			<img
 				src={backgroundImage}
 				alt='The boy who stand next to a laptop which reach to the belt of that boy'
-				className='w-[35rem] xl:w-full'
+				className='w-[35rem] xl:w-full select-none'
 			/>
 		</div>
 		<div className='absolute bottom-10 left-1/2 hidden animate-wiggle items-center justify-center xl:flex'>

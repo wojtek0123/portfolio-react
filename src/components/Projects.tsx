@@ -122,7 +122,7 @@ const Projects: React.FC = () => {
 						target='_blank'
 						className='rounded border border-white bg-black px-5 py-3 text-xl text-white transition-colors hover:bg-zinc-900 sm:px-10'
 					>
-						See more
+						See more on github
 					</a>
 				</div>
 			</>
