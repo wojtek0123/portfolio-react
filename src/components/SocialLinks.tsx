@@ -33,7 +33,7 @@ const Links: React.FC<{smallSize: boolean}> = ({smallSize}) => (
 			</svg>
 		</a>
 		<a
-			href='https://www.facebook.com/wojtus.pietraszuk/'
+			href='https://www.facebook.com/w0jtek.pietraszuk/'
 			rel='noopener noreferrer'
 			title='Facebook profile'
 			className='flex items-center justify-center'
